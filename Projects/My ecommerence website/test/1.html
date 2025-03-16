@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Trendz - Innovate Your Digital Lifestyle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            color: #898787;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #898787;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4d4d4;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-icons a {
+            color:  #898787;
+            text-decoration: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            animation: zoom 10s infinite;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            /* Increased opacity for better contrast */
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .hero-content {
+            max-width: 600px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .shop-now-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .shop-now-btn:hover {
+            background-color: #898787;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 4rem;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+        .products-section > h2{
+            color: black;
+        }
+        .products-container {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+        }
+
+        .products-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .product-card {
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #000;
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            /* Responsive height */
+            object-fit: cover;
+            background-color: #f8f8f8;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .product-price {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .original-price {
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .sale-price {
+            color: #000;
+            font-weight: 500;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #333;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #d4d4d4;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section ul li a {
+            color: #898787;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #d4d4d4;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            width: 70%;
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            color: #898787;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #d4d4d4;
+        }
+
+
+
+        /* General Text Animation */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        span,
+        li {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Navbar Text Animation */
+        .navbar .logo,
+        .navbar p,
+        .nav-links a,
+        .nav-icons a {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Hero Section Text Animation */
+        .hero-content h1,
+        .hero-content p,
+        .shop-now-btn {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Products Section Text Animation */
+        .products-section h2,
+        .product-title,
+        .product-price,
+        .add-to-cart {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Footer Section Text Animation */
+        .footer-section h3,
+        .footer-section ul li a,
+        .footer-section p,
+        .newsletter-form input,
+        .newsletter-form button,
+        .social-icons a,
+        .footer-bottom p {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Keyframes for FadeInUp Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay Animations for Different Sections */
+        .navbar .logo {
+            animation-delay: 0.2s;
+        }
+
+        .navbar p {
+            animation-delay: 0.4s;
+        }
+
+        .nav-links a {
+            animation-delay: 0.6s;
+        }
+
+        .nav-icons a {
+            animation-delay: 0.8s;
+        }
+
+        .hero-content h1 {
+            animation-delay: 1s;
+        }
+
+        .hero-content p {
+            animation-delay: 1.2s;
+        }
+
+        .shop-now-btn {
+            animation-delay: 1.4s;
+        }
+
+        .products-section h2 {
+            animation-delay: 1.6s;
+        }
+
+        .product-title {
+            animation-delay: 1.8s;
+        }
+
+        .product-price {
+            animation-delay: 2s;
+        }
+
+        .add-to-cart {
+            animation-delay: 2.2s;
+        }
+
+        .footer-section h3 {
+            animation-delay: 2.4s;
+        }
+
+        .footer-section ul li a {
+            animation-delay: 2.6s;
+        }
+
+        .footer-section p {
+            animation-delay: 2.8s;
+        }
+
+        .newsletter-form input {
+            animation-delay: 3s;
+        }
+
+        .newsletter-form button {
+            animation-delay: 3.2s;
+        }
+
+        .social-icons a {
+            animation-delay: 3.4s;
+        }
+
+        .footer-bottom p {
+            animation-delay: 3.6s;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                align-items: flex-start;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 1rem;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-icons {
+                display: none;
+            }
+
+            .hero {
+                padding: 0 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .products-section {
+                padding: 2rem;
+            }
+
+            .products-container {
+                flex-direction: column;
+                overflow-x: visible;
+            }
+
+            .product-card {
+                min-width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                width: 100%;
+            }
+
+            .newsletter-form button {
+                width: 100%;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .nav-links a {
+            opacity: 0;
+            transform: scale(0.5) translateX(50px);
+            /* Start small and off to the right */
+            animation: zoomInFromRight 0.8s ease-in-out forwards;
+        }
+
+        @keyframes zoomInFromRight {
+            from {
+                opacity: 0;
+                transform: scale(0.5) translateX(50px);
+                /* Start from right */
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateX(0);
+                /* End at normal position */
+            }
+        }
+
+        /* Apply animations */
+
+        .shop-now-btn {
+            transition: transform 0.3s ease;
+        }
+
+        .product-title {
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        .sale-badge {
+            animation: shake 1.5s ease-in-out infinite;
+        }
+
+        .logosticky {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 30px;
+            width: 100px;
+            height: auto;
+            z-index: 1000;
+            opacity: 0;
+            /* Initially hidden */
+            transform: translateX(100px) scale(0.5);
+            /* Start off-screen (right) and zoomed out */
+            animation: logostickyAnimation 1s ease-out forwards;
+        }
+
+        @keyframes logostickyAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(100px) scale(0.5);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div>
+        <nav class="navbar">
+            <a href="#" class="logo">Tech Trendz
+                <br>
+                <p style="font-size: 10px;">"Where Tech Meets Trend"</p>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="#">Headphones</a>
+                <a href="#">Earbuds</a>
+                <a href="#">Smartwatches</a>
+                <a href="#">Premium Audio</a>
+                <a href="#">Tech Essentials</a>
+                <a href="#">Summer Collection</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slideshow">
+            <div class="slide active" style="background-image: url('pics/airbuds pro.jpeg')"></div>
+            <div class="slide" style="background-image: url('pics/1pic2.webp')"></div>
+            <div class="slide" style="background-image: url('pics/watch ultra.webp')"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Innovate Your Digital Lifestyle</h1>
+            <p>Discover the perfect blend of technology and style with Tech Trendz. Our products are designed to enhance
+                your everyday life.</p>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products-section">
+        <h2>Featured Products:</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <span class="sale-badge">Sale!</span>
+                <img src="pics/airbud sale.jpeg" alt="Apple AirPods Pro" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Apple AirPods Pro</h3>
+                    <div class="product-price">
+                        <span class="original-price">4,000Rs/-</span>
+                        <span class="sale-price">2,499Rs/-</span>
+                    </div>
+                    <a href="#" class="add-to-cart">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="pics/maxes.webp" alt="Apple AirPods Max" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Apple AirPods Max</h3>
+                    <div class="product-price">
+                        <span class="original-price">6,000Rs/-</span>
+                        <span class="sale-price">3,499Rs/-</span>
+                    </div>
+                    <a href="#" class="add-to-cart">Coming Soon</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="pics/t8000 ultra.jpeg" alt="Wireless Earbuds" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">T8000 Ultra</h3>
+                    <div class="product-price">
+                        <span class="original-price">Rs/-</span>
+                        <span class="sale-price"></span>
+                    </div>
+                    <a href="#" class="add-to-cart">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Earbuds</a></li>
+                <li><a href="#">Smartwatches</a></li>
+                <li><a href="#">DIY Tech Gadgets</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest tech trends and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_techtrendz_official" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/abdullahazhar202/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Tech Trendz. All rights reserved.</p>
+        </div>
+    </footer>
+    <img src="logo.png" alt="" width="150" class="logosticky">
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Slideshow functionality
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+</body>
+
+</html>

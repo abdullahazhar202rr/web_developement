@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vacations trip form">
+    <meta name="author" content="Abdullah Azhar">
+    <link rel="shortcut icon"
+        href="https://www.shutterstock.com/shutterstock/photos/315822794/display_1500/stock-vector--d-realistic-summer-vacation-design-for-travel-in-a-sand-beach-island-in-horizon-with-summer-items-315822794.jpg"
+        type="image/x-icon">
+    <title>Travel form</title>
+</head>
+
+<body style="background-image: url(/project/image3.jpg);">
+    <header>
+        <input type="search" name="search" id="search" placeholder="search">
+        <center>
+            <h1>Fill the form for vacation trip</h1>
+        </center>
+    </header>
+    <form action="trip.php">
+    <main style="color: rgb(0, 0, 0);" >
+        <section>
+            <div >
+                <h2>
+                    Personal Information
+                </h2>
+                <ul>
+                    <ul>
+                        <li>Name: <input type="text" placeholder="Enter the name">
+                            <Label><input type="radio" name="section" value="section a">Section A</Label>
+                            <Label><input type="radio" name="section" value="section b">Section B</Label>
+                            <Label><input type="radio" name="section" value="section c">Section C</Label>
+                        </li><br>
+                        <li>Roll no. <input type="number" placeholder="Roll number"></li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <ul type="square">
+                    <p>
+                    <h3></h3><b> <big> Give information about your university</big></b></h3>
+
+                    </p>
+                    <ul>
+                        <h4><b>
+                                <li>Select campus</li>
+                            </b></h4>
+                        <label for="brancha"><input type="radio" id="brancha" value="Amin" name="campus">Amin
+                            campus</label>
+                        <label for="branchb"><input type="radio" id="branchb" value="Saleem" name="campus">Saleem
+                            campus</label>
+                        <h4><b>
+                                <li>select department</li>
+                            </b></h4>
+                        <label for="AI"><input type="radio" id="AI" name="dept" value="ai">AI department</label>
+                        <label for="cs"><input type="radio" id="cs" name="dept" value="cs">CS department</label>
+                        <label for="SE"><input type="radio" id="SE" name="dept" value="se">SE department</label>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>
+                payment Information
+            </h2>
+            <div>
+                <ul type="square"></ul>
+                <ul>
+                    <select name="payment" id="payment">
+                        <option value="bank card">card payment</option>
+                        <option value="jazzcash">jazzcash</option>
+                        <option value="easypaisa">easypaisa</option>
+                        <option value="cash">cash</option>
+                    </select>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <ul>
+                    <h3><b><big>select the location you want to go</big></b></h3>
+                    <ul>
+                        <label for="Makkah"><input type="radio" name="location" value="Makkah"
+                                id="Makkah">Makkah</label>
+                        <label for="dubai"><input type="radio" name="location" id="dubai" value="dubai">dubai</label>
+                        <label for="malam jaba"><input type="radio" name="location" id="malam jaba"
+                                value="malam jaba">malam
+                            jaba</label>
+                        <label for="muree"><input type="radio" name="location" value="muree" id="muree">muree</label>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+        <aside>
+            <br>
+            <label for="image">
+                <ul>
+                    <b><big>upload your image</big></b>
+                </ul>
+                <ul>
+                    <ul>
+                        <input type="file" name="image" id="image"><b> &nbsp; (Not necessary)</b>
+                    </ul>
+                </ul>
+            </label>
+            <img src="/image.jpg"
+                width="250px">
+        </aside>
+    </main>
+    <footer>
+        <center>
+            <input type="submit" value="Submit" style="width: 150px; height: 30px;">
+
+        </center>
+    </footer>
+    </form>
+
+</body>
+
+</html>

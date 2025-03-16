@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all linear 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(assets/snow.png);
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    backdrop-filter: blur(5px);
+    animation: open 0.5s linear forwards;
+}
+@keyframes open {
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+nav {
+    padding: 5px;
+    display: flex;
+    width: 100vw;
+    height: auto;
+}
+
+nav>ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+
+}
+
+nav>ul>li>a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+nav>ul>li>a:hover {
+    color: #0056b3;
+    font-size: 20px;
+}
+.tag{
+    position: absolute;
+    right: 45%;
+    margin-top: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+
+.theme {
+    border: 2px solid black;
+    margin: auto;
+    margin-right: 30px;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.switch {
+    background-color: black;
+    border-radius: 50%;
+    margin: 1px 2px;
+    width: 25px;
+    height: 25px;
+    animation: bkw 0.3s linear forwards;
+}
+
+@keyframes bkw {
+
+    from {
+        transform: translateX(35px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.fwd {
+    animation: fd 0.3s linear forwards;
+
+}
+
+@keyframes fd {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.227);
+    backdrop-filter: blur(5px);
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    margin: 50px auto;
+    padding: 20px;
+    animation: st 0.8s linear forwards;
+}
+.box>h2{
+    color: white;
+}
+@keyframes st {
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+.search {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-inp {
+    padding: 10px;
+    width: 70%;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.437);
+}
+
+#search-btn {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.456);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30%;
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+#weather-info {
+    margin-top: 20px;
+    text-align: center;
+    /* border: 2px solid black; */
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+.name{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 3px 2px 3px rgb(9, 226, 229);
+
+}
+.dark-mode {
+    .nav {
+        background-color: rgba(15, 15, 15, 0.575);
+    }
+
+    .box {
+        background-color: rgba(15, 15, 15, 0.575);
+    }
+
+    #search-inp {
+        background-color: rgb(255, 255, 255);
+    }
+
+    #search-btn {
+        background-color: white;
+    }
+
+    .theme {
+        background-color: rgba(0, 0, 0, 0.666);
+    }
+
+    .switch {
+        background-color: #fff;
+    }
+
+    nav>ul>li>a {
+        color: rgb(183, 178, 178);
+    }
+
+
+    #weather-info {
+        color: white;
+    }
+
+}
+@media (max-width: 1070px) {
+    .tag{
+       display: none;
+    }
+}
+@media (max-width: 800px) {
+    .tag{
+       display: none;
+    }
+}
+@media (max-width:500px){
+    nav>ul>li:nth-last-child(1){
+        display: none;
+    }
+}

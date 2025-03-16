@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            position: relative;
+            width: 90vw;
+            height: 70vh;
+            background-color: blue;
+            display: flex;
+
+        }
+        .ball{
+            background-color: red;
+            position: absolute;
+            width: 4em;
+            border-radius: 70px;
+            height: 4em;
+            align-self: flex-end;
+            animation: ballAnimationX 2s linear infinite,ballAnimationY 2s ease-out infinite alternate;
+        }
+        @keyframes ballAnimationY {
+            0%{
+                bottom: 0;
+            }
+            50%{
+                bottom: 50%;
+            }
+            75%{
+                bottom: 20%;
+            }
+            100%{
+                bottom: 0%;
+            }
+             /* from{
+                bottom: 0%;
+                
+            }
+            to{
+                bottom: 20%;
+            } */
+
+        }
+        @keyframes ballAnimationX{
+             /* from{
+                left: 0;
+             }
+             to{
+                left: 100%;
+             } */
+            0%{
+                left: 0;
+            }
+            50%{
+                left: 50%;
+            }
+            100%{
+                left: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

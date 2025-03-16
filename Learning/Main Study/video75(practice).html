@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbacks and promises</title>
+</head>
+
+<body>
+    <script>
+        // function handledata(error,data){
+        //     if (error){
+        //         console.log(error)
+        //         return;
+        //     }
+        //     console.log(data)
+
+        // }
+        // function fetchdata(callbacks){
+        //         let num=Math.random()
+        //         let error= num>0.5?"Error":null
+        //         let data={
+        //             name: "Abdullah",
+        //             age:23,
+        //         };
+        //         callbacks(error,data)
+        // }
+        // fetchdata(handledata)
+
+
+
+        // let users= new Promise((resolve)=>{
+        //     setTimeout(() => {
+        //     resolve({
+        //         name:"Abdullah",
+        //         age: 19
+        //     })
+        //    }, 2000);           
+        // })
+        // let posts= new Promise((resolve)=>{
+        //     setTimeout(() => {
+        //     resolve(["post1","post2","post3"])
+        //    }, 2000);
+
+        // })
+        // let comments= new Promise((resolve, reject)=>{
+        //     setTimeout(() => {
+        //         resolve(["Good","Nice","Wonderfull"])                
+        //     }, 2000);
+
+        // })
+        // let all=Promise.all([users,posts,comments]).then(([users,posts,comments])=>{
+        //     console.log("Users",users)
+        //     console.log("posts",posts)
+        //     console.log("comments",comments)
+        // }).catch((e)=>{
+        //     console.log(e)
+        // })
+
+
+        // p1.then((a)=>{
+        //     console.log("data: ",a)
+        // }).catch((e)=>{
+        //     console.log(e)
+        // });
+
+
+
+        function orderif(id) {
+            return new Promise((resolve, reject) => {
+                if (!id) {
+                    reject("NULL")
+                    return
+                }
+                resolve(`order ${id} Completed`)
+            })
+        }
+        orderif(123).then((i)=>{
+            console.log(i)
+        }).catch((e)=>{
+            console.log(e)
+        })
+    </script>
+</body>
+
+</html>

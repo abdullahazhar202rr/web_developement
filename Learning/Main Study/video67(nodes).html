@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+    <script>
+        // let cont= document.body.childNodes[1]
+        // cont.firstElementChild.style.backgroundColor="red"
+        // cont.lastElementChild.style.backgroundColor="blue"
+        // cont.firstElementChild.parentElement.style.backgroundColor="green"
+
+        let cont= document.body.firstElementChild
+        // cont.children[0].style.backgroundColor="red"
+        
+
+        document.body.firstElementChild.childNodes[1].style.backgroundColor="blue"
+        document.body.firstElementChild.style.backgroundColor="yellow"
+        document.body.firstElementChild.children[1].style.backgroundColor="red"
+        document.body.firstElementChild.children[1].nextElementSibling.style.backgroundColor="beige"
+        document.body.firstElementChild.children[1].previousElementSibling.style.backgroundColor="orange"
+        document.body.firstElementChild.children[3].style.backgroundColor="blue"
+        document.body.firstElementChild.children[3].nextElementSibling.style.backgroundColor="green"
+        document.body.firstElementChild.lastElementChild.style.backgroundColor="aqua"
+    </script>
+</body>
+</html>

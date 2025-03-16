@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .container{
+        width: 90vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div" hidden>
+            Hello I am hidden Div
+        </div>
+        <button onclick="document.getElementById('div').hidden=!document.getElementById('div').hidden">
+            Click Me
+        </button>
+    </div>
+    <script>
+        // let btn=document.body.getElementsByTagName("button")[0];
+        // if(btn.click()){
+        //     document.getElementById("div").hidden=false;
+        // }
+    </script>
+</body>
+</html>

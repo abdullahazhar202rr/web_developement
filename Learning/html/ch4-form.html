@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+
+<body>
+    <div>
+        <h1>travel form for a trip</h1>
+        <form action="form.c++">
+            <div>
+                <input type="text" placeholder="Enter your name">
+                <label for="sectionida"><input type="radio" value="section a" name="section" id="sectionida">
+                    Section A</label>
+                <label for="sectionidb"><input type="radio" value="section b" name="section" id="sectionidb">
+                    Section B</label>
+                <label for="sectionidc"><input type="radio" value="section c" name="section" id="sectionidc">
+                    Section C</label>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="canteen" id="foodcanteen" class="red">
+                <label for="foodcanteen">want food?</label>
+            </div>
+            <br>
+            <div>
+                <label for="pic"><input type="image" alt="/image" src="image" id="pic">Upload image</label>
+            </div>
+            <br>
+            <div>
+                <label for="color"><input type="color" value="color" name="color" id="color">color</label>
+            </div>
+            <br>
+            <div>
+                <label for="datetime"><input type="datetime-local">date and time</label>
+            </div>
+            <br>
+            <!-- textarea fo giving multiple lines -->
+            <div>
+                <label for="explain">Explain why you want to join <br>
+                    <textarea name="explain" id="explain" cols="30" rows="10"
+                        placeholder="Give your thoughts"></textarea></label>
+            </div>
+            <!-- select options -->
+            <div>
+                <select name="cars" id="cars">
+                    <option value="no-car">Select your car</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

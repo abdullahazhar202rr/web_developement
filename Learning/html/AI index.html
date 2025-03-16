@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image.jpg" type="image/x-icon">
+    <title>Abdullah's website</title>
+    <!-- <link rel="stylesheet" href="indexstyle.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('image2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.7);
+            background-image: url('stars.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #ffcd00;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffcd00;
+        }
+
+        header h1 span {
+            display: block;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        header img {
+            margin-top: 15px;
+            border-radius: 50%;
+            width: 120px;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Circle container */
+        .circle-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            border: 3px solid #ffcd00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: rotate 10s infinite linear;
+        }
+
+        /* Keyframes for rotation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Chapter Cards */
+        .chapter-card {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chapter-card:hover {
+            transform: scale(1.5);
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
+            box-shadow: 0px 0px 15px #ffcd00;
+        }
+
+        .chapter-card h2 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #ffcd00;
+        }
+
+        .chapter-card p {
+            font-size: 0.8rem;
+            color: #ddd;
+        }
+
+        .chapter-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            color: #000;
+            background-color: #ffcd00;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.7rem;
+        }
+
+        /* Positioning the chapter cards in a circular pattern */
+        .chapter-card:nth-child(1) {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .chapter-card:nth-child(2) {
+            top: 50%;
+            left: 80%;
+            transform: translateY(-50%);
+        }
+
+        .chapter-card:nth-child(3) {
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .chapter-card:nth-child(4) {
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-top: 2px solid #ffcd00;
+        }
+
+        footer h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #ffc400;
+            background-color: rgba(9, 68, 231, 0.966);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Html basic tutorial<br>
+            <span>by Abdullah Azhar</span>
+        </h1>
+        <img src="image.jpg" width="200" alt="Abdullah Azhar">
+    </header>
+    <main>
+        <div class="circle-container">
+            <div class="chapter-card">
+                <h2>Chapter 1</h2>
+                <p>Intro to HTML</p>
+                <a href="/ch1.html">Go</a>
+            </div>
+            <div class="chapter-card">
+                <h2>Chapter 2</h2>
+                <p>Tags & Elements</p>
+                <a href="/ch2.html">Go</a>
+            </div>
+            <div class="chapter-card">
+                <h2>Chapter 3</h2>
+                <p>Forms & Inputs</p>
+                <a href="/ch3.html">Go</a>
+            </div>
+            <div class="chapter-card">
+                <h2>Chapter 4</h2>
+                <p>Travel Form</p>
+                <a href="/ch4.html">Go</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <br>
+        <marquee>
+            <h3>Abdullah Azhar</h3>
+        </marquee>
+    </footer>
+</body>
+
+</html>

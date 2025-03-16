@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        .item img{
+            width: 100px;
+            height: 150px;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .container .item{
+            transition: 0.5s;
+            filter: brightness(0);
+
+        }
+        .container .item:hover{
+            filter: brightness(1);
+            transform: translateZ(150px);
+        }
+        .item:hover + * {
+            filter: brightness(0.6);
+            transform: translateZ(70px) rotateY(40deg);
+        }
+        .item:hover + * +* {
+            filter: brightness(0.4);
+            transform: translateZ(35px) rotateY(20deg);
+        }
+        .item:hover + * +*+* {
+            filter: brightness(0.2);
+            transform: translateZ(17px) rotateY(10deg);
+        }
+        .item:has(+*:hover) {
+            filter: brightness(0.6);
+            transform: translateZ(70px) rotateY(-40deg);
+        }
+        .item:has(+ * +* :hover) {
+            filter: brightness(0.4);
+            transform: translateZ(35px) rotateY(-20deg);
+        }
+        .item:has(+ * +*+* :hover) {
+            filter: brightness(0.2);
+            transform: translateZ(17px) rotateY(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+        <div class="item"><img src="6show.webp" alt=""></div>
+    </div>
+</body>
+</html>

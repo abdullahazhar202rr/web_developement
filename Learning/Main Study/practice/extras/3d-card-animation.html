@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Card Animation</title>
+    <style>
+        .container {
+            display: flex;
+            transform-style: preserve-3d;
+            transform: perspective(2000px);
+            /* border: 2px solid black; */
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .container .slider{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            top: 10%;
+            left: 50%;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            animation: autorun 20s linear infinite;
+        }
+        @keyframes autorun{
+            from{
+                transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+            }
+            to{
+                transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+            }
+        }
+        .slider .item{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            inset: 0 0 0 0;
+            transform: rotateY( calc(( var(--position) - 1 ) * ( 360 / var(--quantity) * 1deg )) )
+                                translateZ(400px);
+        }
+        .item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider" style="--quantity: 8">
+            <div class="item" style="--position: 1"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 2"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 3"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 4"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 5"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 6"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 7"><img src="6show.webp" alt=""></div>
+            <div class="item" style="--position: 8"><img src="6show.webp" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

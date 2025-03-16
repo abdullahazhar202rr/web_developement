@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>UltraEditor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI";
+        }
+        body{
+            scroll-behavior: smooth;
+            animation: wtb 3s ease-in-out 0s 1 forwards;
+        }
+        @keyframes wtb{
+            from{
+                background-color: rgb(42, 36, 36);
+            }
+            to{
+                background-color: white;
+            }
+        }
+
+        .m {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+
+        .logo span {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            /* border: 2px solid black; */
+        }
+
+        .hero {
+            text-align: center;
+            width: 50vw;
+            height: 50vh;
+            padding-top: 130px;
+            /* border: 2px solid black; */
+        }
+
+        .hero h1 {
+            font-size: 2.7rem;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero button {
+            padding: 20px;
+            background-color: rgb(44, 173, 209);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .second {
+            display: grid;
+            justify-content: center;
+            /* grid-template-areas: "head head head"
+                "eng det itl"
+                "esp fra port"
+                "jap kor  chi"
+                "tc empty empty"; */
+                /* border: 2px solid black; */
+        }
+
+        .s {
+            margin-top: 30px;
+            /* border: 2px solid black; */
+            height: 200vh;
+            width: 75vw;
+            display: grid;
+            grid-template-areas: "head head head"
+                "eng det itl"
+                "esp fra port"
+                "jap kor  chi"
+                "tc empty empty";
+            gap: 30px 30px;
+        }
+
+
+        .s h3 {
+            font-weight: normal;
+            font-size: 1.7rem;
+            grid-area: head;
+
+        }
+
+        .lang {
+            height: 250px;
+            width: 350px;
+            text-align: center;
+            background-color: rgb(238, 236, 236);
+            border-radius: 10px;
+        }
+
+        .lang h3 {
+            padding-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .num {
+            font-size: 10px;
+            padding: 20px;
+            word-break: break-word;
+            line-height: 1rem;
+        }
+        
+        .para {
+            font-size: 15px;
+            font-weight: lighter;
+            /* padding-bottom: 15px; */
+            padding-top: 15px;
+        }
+        
+        .lang button {
+            background-color: rgb(51, 160, 12);
+            width: 10rem;
+            height: 2.6rem;
+            color: white;
+            margin-top: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .lang:hover{
+            transform: translateX(-23px) scale(1.1);
+            transition: transform 0.3s ease-in-out 0s;
+        }
+        .up{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;                 
+        }
+        .third{
+            display: grid;
+            justify-content: center;
+            /* border: 2px solid black; */
+            width: 100%;
+            background-color: rgb(44, 42, 42);
+        }
+        .cards{
+            /* border: 2px solid black; */
+            height: 110vh;
+            width: 65vw;
+            display: grid;
+            grid-template-areas: "text form"
+            "def def";
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* border: 2px solid black; */
+            height: 500px;
+            width: 400px;
+        }
+        .card-1{
+            grid-area: text;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 2;
+        }
+        .card-1 h4{
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-2{
+            grid-area: form;
+            height: 300px;
+            width: 350px;
+            border-radius: 15px;
+            border: none;
+            margin-top: 100px;
+            margin-left: 50px;
+            background-color: #fff;
+        }
+        .card-2 h4{
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: rgb(16, 217, 217);
+            margin-bottom: 10px;
+        }
+        .card-2 input[type="email"]{
+            width: 230px;
+            padding: 15px;
+            border: 1px solid rgb(146, 140, 140);
+            border-radius: 2px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .card-2 input[type="submit"]{
+            padding: 15px;
+            background-color: rgb(16, 217, 217);
+            color: white;
+            border: none;
+            width: 260px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .card-3{
+            grid-area: def;
+            text-align: left;
+            color: white;
+            font-weight: light;
+            line-height: 2;
+
+        }
+        .card-3 dt{
+            font-size: 1.5rem;
+        }
+        b{
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 1450px){
+            .hero h1{
+                font-size: 2rem;
+            }
+            .hero p{
+                font-size: 1.5rem;
+            }
+            .hero button{
+                font-size: 1.1rem;
+                padding: auto;
+            }
+            .s{
+                transition-property: all;
+                transition-duration: 3s;
+                transition-delay: 1s;
+                transition-behavior: ease;
+                grid-template-areas: "head head"
+                    "eng det"
+                    "itl esp"
+                    "fra port"
+                    "jap kor"
+                    "chi tc";
+            }
+            .s h3{
+                font-size: 1.3rem;
+            }
+        }
+        @media only screen and (max-width: 900px){
+            .s{
+                grid-template-areas: "head"
+                    "eng"
+                    "det"
+                    "itl" 
+                    "esp"
+                    "fra" 
+                    "port"
+                    "jap" 
+                    "kor"
+                    "chi" 
+                    "tc";
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    height: 400vh;
+            }
+            .s h3{
+                font-size: 1rem;
+            }
+            nav{
+                width: 100;
+            }
+            .cards{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .s > h3 > img{
+                width: 50px;
+
+            
+            }
+            .card-2{
+                width: 300px;
+                height: 200px;
+                margin-bottom: 50px;
+            }
+            .card-2 input[type="email"]{
+                width: 13em;
+                padding: 10px;
+            }
+            .card-2 input[type="submit"]{
+                padding: 10px;
+                width:100px;
+                margin-bottom: 10px;
+            }
+
+
+        }
+        </style>
+</head>
+
+<body>
+    <header id="head">
+
+        <div class="m">
+
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="logo"
+                width="50" style="margin-left: 30px;">
+            <div class="navbar">
+                <div class="logo">
+                    UltraEdit
+                    <span style="font-size: 9px; color: gray;">An idea,inc. company</span>
+                </div>
+                <nav>
+                    <li>Products <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg> </li>
+                    <li>Pricing <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg></li>
+                    <li>Resources <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg></li>
+                    <li>About us <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg></li>
+                    <li><img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt=""></li>
+                    <li><i class="fa fa-search"></i></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section" id="Hero-section">
+            <div class="hero">
+                <h1>Download <b>UltraEdit</b> for Windows <img decoding="async" src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="112" height="32" alt="Reviews" class="wp-image-1613 alignnone size-full"></h1>
+                <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the
+                    text editor.</p>
+                <button>Download Mac or Linux version</button>
+            </div>
+        </section>
+        <section class="second">
+            <div class="s">
+                <h3><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png " width="70px"
+                        alt="Pic" style="padding-right: 30px;">Download UltraEdit <sub><span>v2024.2 (released
+                            2025-01-15) | Hotfix information </span></sub></h3>
+
+
+                <div class="lang1 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang2 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang3 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang4 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang5 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang6 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang7 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang8 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang9 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+                <div class="lang10 lang">
+                    <h3>English</h3>
+                    <p class="para">Eng</p>
+                    <button>Download 64-bit</button>
+                    <p class="para">Eng</p>
+                    <p class="num">B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <a href="#head" class="up">
+                <i class="fa fa-arrow-up" style="font-size:36px"></i>
+            </a>
+            
+        </aside>
+        <section class="third">
+            <div class="cards">
+                <div class="card card-1">
+                    <h4>Join the UltraEdit newsletter</h4>
+                    <p>Sign up for our newsletter and receive emails for the latest news, blogs, and special deals on UltraEdit.</p>
+                </div>
+                <div class="card card-2">
+                    <form action="#">
+                        <h4>Subscribe to our emails</h4>
+                        <label for="email">Enter email address
+                        </label>
+                        <br>
+                        <input type="email" name="email" id="email">
+                        <br>
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </div>
+                <div class="card-3">
+                    <dt>EXE or MSI?</dt>
+                    <dd>The EXE builds of our products are the preferred download for most of our users, running Windows 8.1 and later.
+                        
+                        We make MSI builds available for bulk or silent deployments (command line, GPO, SCCM, etc.). <b style="color: rgb(15, 199, 199);">Get the UltraEdit MSI installer.</b></dd>
+                        <dt>Free trial period</dt>
+                        <dd>This application comes with a free, fully functional 30 day trial period. After the trial period expires, you must <b style="color: rgb(15, 199, 199);">purchase a license</b> to continue using it.</dd>
+                    </div>
+                </div>
+                </section>
+                <section class="forth">
+                    
+                </section>
+    </main>
+</body>
+
+</html>

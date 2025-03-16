@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            overflow: auto;
+            /* justify-content: center; */
+            flex-wrap: wrap;
+            /* align-items: center; */
+            align-content: center;
+            gap: 20px 20px;
+            /* row-gap: 30px; */
+            /* column-gap: 30px; */
+            flex-flow: row row-reverse;
+
+        }
+        .box{
+            border: 2px solid red;
+            /* margin: 10px; */
+            min-width: 65px;
+            height: 65px;
+            background-color: aquamarine;
+        }
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        /* jitna zyada order utna baad me aae ga item */
+        .item-1{
+            flex-grow: 2;
+            /* kitne items ke jagah le ga aik item flex grow se karen ge... */
+            flex-shrink: 2;
+            /* it is the ability of an item to shrink if necessary e.g. in small sizes devices the item shrinks */
+            align-self: flex-end;
+            /* this will apply on single item  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box order-1 item-1 ">1</div>
+        <div class="box order-1">2</div>
+        <div class="box order-1">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+import streamlit as sl
+import time as T
+with sl.spinner("Just wait"):
+    T.sleep(2)
+
+sl.balloons()
+sl.sidebar.title("Abdullah Azhar's first streamlit app")
+sl.sidebar.text_input("Tell me how's this first app")
+sl.sidebar.select_slider("Rate this app", ['bad','good','best'])
+sl.image("my pic.jpg")
+sl.title("My first streamlit app")
+sl.header("Content-Type")
+sl.subheader("Accept-Encoding")
+sl.info("Hello World")
+sl.warning("It's a warning")
+sl.success("Successfully started streamlit course")
+sl.write("Hello World")
+sl.write(range(50))
+sl.error("Something went wrong")
+sl.markdown("Hello World")
+sl.markdown("# Markdown")
+sl.markdown("## Markdown")
+sl.markdown("### Markdown")
+sl.markdown(":moon:")
+sl.text("It is a text")
+sl.caption("Caption is here")
+
+# for mathematical equation
+sl.latex(r'''a + bx^2+c ''')
+
+sl.checkbox("login")
+sl.button("Login")
+sl.radio("Slect your gender", ["Male","Female","Rather not say"])
+sl.selectbox("select your program", ["BSAI","BSCS","BSSE"])
+sl.multiselect("Select your language",["Python","C","C++","html","CSS","Javascript"])
+sl.select_slider("Rating",["bad", "good","best"])
+sl.slider("Select Number",0,50)
+sl.number_input("Pick a Number ",0,100)
+sl.text_input("Enter your email")
+sl.date_input("Enter your date")
+sl.time_input("Enter your time")
+
+sl.text_area("Welcome to Abdullah Azhar's first streamlit web app")
+sl.file_uploader("Upload a file")
+sl.color_picker("pick a colour")
+sl.progress(20)

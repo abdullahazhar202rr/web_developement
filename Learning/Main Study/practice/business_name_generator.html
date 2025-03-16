@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Adjectives:
+        // Crazy 
+        // Amazing
+        // Fire 
+
+        // Shop Name:
+        // Engine
+        // Foods
+        // Garments
+
+        // Another Word:
+        // Bros
+        // Limited
+        // Hub
+        let rand=Math.random()
+        let n1,n2,n3=null
+        if(rand<0.33){
+            n1="Crazy";
+            n2="Engine";
+            n3="Bros";
+        }
+        else if(rand<0.66 && rand>=0.33){
+            n1="Amazing";
+            n2="Foods";
+            n3="Limited";
+        }
+        else if(rand<0.99 && rand>=0.66){
+            n1="Fire";
+            n2="Garments";
+            n3= "Hub";
+        }
+        console.log(n1, n2,n3)
+    </script>
+</body>
+
+</html>

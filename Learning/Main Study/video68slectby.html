@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box" id="redbox">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+        <div class="box">box 6</div>
+        <div class="box">box 7</div>
+    </div>
+    <script>
+        let cb=document.getElementsByClassName("box")
+        // cb[1].style.backgroundColor ="red"
+        for (let i = 0; i < cb.length; i++) {
+            cb[i].style.backgroundColor = "brown"
+        }
+        document.getElementById("redbox").style.backgroundColor="red"
+        document.querySelector(".box").style.backgroundColor="yellow"
+        // document.querySelectorAll(".box").forEach(e=>{
+        //     e.style.backgroundColor="green"
+        // })
+        document.getElementsByTagName("div").item(5).style.backgroundColor="aqua"
+        let e= document.getElementsByTagName("div")
+        // e[3].matches(".box")
+        // e[3].closest("#redbox")
+        // document.querySelectorAll(".container").contains(e[3])
+    </script>
+</body>
+</html>

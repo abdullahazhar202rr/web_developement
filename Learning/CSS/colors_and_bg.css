@@ -1,0 +1,8 @@
+.red{
+    background: #da0606;
+    color: rgb(4, 42, 255);
+}
+.green{
+    background-color: hsl(106, 100%, 45%);
+    color: red;
+}

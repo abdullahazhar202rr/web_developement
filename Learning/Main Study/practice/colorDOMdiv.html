@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       .container {
+        display: flex;
+       }
+       .box{
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 10px;
+        padding: 5px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+    <script>
+        let box=document.body.getElementsByClassName("box");
+        // let box=document.querySelector(".container").children;
+        function randomcolor(){
+            n1=Math.ceil(Math.random()*255)
+            n2=Math.ceil(Math.random()*255)
+            n3=Math.ceil(Math.random()*255)
+            return `rgb(${n1},${n2},${n3})`
+        }
+        for (let i = 0; i < box.length; i++) {
+            box[i].style.backgroundColor=randomcolor();
+            box[i].style.color=randomcolor();
+        }
+    </script>
+</body>
+</html>

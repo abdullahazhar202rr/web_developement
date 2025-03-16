@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        :root {
+            --color: white;
+            --bgc: grey;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s linear;
+        }
+
+        body {
+            background-color: var(--bgc);
+        }
+
+        .nav {
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            background-color: #4D4D4D;
+            padding-top: 20px;
+        }
+
+        nav>ul {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            margin: 0px 20px;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+            color: var(--color);
+        }
+
+        nav>ul>li>a:hover {
+            transform: scale(1.3);
+            color: var(--color);
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 3px 2px 3px rgb(9, 226, 229);
+        }
+
+        .tag {
+            margin-left: 330px;
+            color: var(--color);
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        .name {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--color);
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 3px 2px 3px rgb(9, 226, 229);
+
+        }
+
+        .container {
+            display: flex;
+            margin: 100px auto;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vw;
+            /* border: 2px solid black; */
+        }
+
+        .card {
+            background-color: rgba(8, 8, 8, 0.875);
+            color: white;
+            width: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .info {
+            background-color: grey;
+            width: 100%;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        .arrow {
+            width: 90px;
+            height: 5px;
+            background-color: black;
+            position: relative;
+        }
+
+        .arrow::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -2.7px;
+            border-left: 10px solid black;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="tag">TODO List</div>
+            <div class="name">
+                Abdullah Azhar
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="todo card">
+                    <div class="info">
+                        Add a Card
+                    </div>
+                </div>
+                <div class="arrow"></div>
+                <div class="doing card">
+                    <div class="info">
+                        Add a Card
+                    </div>
+                </div>
+                <div class="arrow"></div>
+                <div class="done card">
+                    <div class="info">
+                        Add a Card
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

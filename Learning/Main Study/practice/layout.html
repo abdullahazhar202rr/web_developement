@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            background-color: purple;
+            height: 25px;
+            width: 100vw;
+
+        }
+
+        ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+
+        }
+
+        .logo {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            mix-blend-mode: multiply;
+            width: 100px;
+            height: auto;
+            z-index: 1000;
+        }
+
+        .box {
+            display: flex;
+            height: 600px;
+            width: 90vw;
+            background-color: rgb(211, 192, 192);
+            border: 3px solid rgb(21, 0, 255);
+            margin: 20px auto;
+        }
+
+        .box2 {
+            border: 3px solid red;
+            margin: 60px;
+            background-color: lightblue;
+            padding: 40px;
+            overflow: auto;
+        }
+
+        .oval {
+            border: 3px solid red;
+            margin: 20px auto;
+            border-radius: 80px;
+            height: 80px;
+            width: 800px;
+            text-align: center;
+            padding-top: 40px;
+            font-size: 30px;
+            color: blue;
+            font-weight: bolder;
+
+        }
+
+        footer {
+            background-color: gray;
+            height: 20px;
+            width: 100vw;
+            text-align: center;
+            padding-top: 2px;
+            color: white;
+            border-top: 2px solid red;
+            position: static;
+            bottom: 0;
+        }
+        @media only screen and (max-width: 816px){
+            .oval{
+                font-size: 20px;
+                padding-bottom: 20px;
+                justify-content: center;
+                width: 300px;
+                height: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKgx-_irAM5pJsOS17bRJxfD4Cxww0fQEbSA&s" width="200"
+        alt="" class="logo">
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact me</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div class="box">
+                <div class="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ducimus expedita
+                    corporis, culpa libero explicabo suscipit voluptas. Eveniet modi, esse perspiciatis distinctio
+                    minima aperiam ratione praesentium accusamus ad corrupti eos error! Iusto voluptates voluptatibus
+                    doloremque adipisci eligendi facere similique veniam sequi vero ipsa illum, non blanditiis aperiam
+                    cum alias reiciendis autem nobis commodi exercitationem pariatur officiis unde architecto
+                    dignissimos harum. Voluptatibus pariatur expedita ut eum deserunt tempora placeat cum! Unde totam
+                    impedit facere, eum natus nihil dolores magni numquam nisi exercitationem id nulla eligendi! Porro
+                    eaque voluptatibus perspiciatis minima nostrum odit cumque reiciendis iure ab illo. Exercitationem
+                    tempora magni distinctio. </div>
+                <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio earum dolores
+                    perspiciatis. Minima sint ea, saepe maxime ad blanditiis ullam autem atque rerum odit tempore,
+                    expedita repudiandae delectus possimus suscipit deserunt temporibus perferendis? At eos minima vero
+                    culpa illum, ducimus eveniet inventore corrupti id sapiente esse odit alias dicta earum laborum
+                    consectetur necessitatibus eius iste autem rem eaque aperiam nisi fugiat! Aut, sunt. Nam voluptas,
+                    esse cumque dicta totam quibusdam corporis dolorum autem maxime temporibus. Facere deleniti
+                    excepturi dicta velit commodi modi maxime. Totam illo dolorum veniam quia, facere enim cum assumenda
+                    expedita voluptates natus vero at ea, qui quibusdam!</div>
+            </div>
+        </article>
+        <section>
+            <div class="oval">
+                Welcome to my Layout Website.
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+
+            <p>�� 2025 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

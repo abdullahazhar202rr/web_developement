@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container c1">1</div>    
+    <div class="container">2</div>
+    <script>
+        let c=document.getElementsByClassName("container")
+        let temp= c[0].getAttribute("class","c1")
+        document.getElementsByClassName("container")[1].setAttribute("class",temp)
+
+    </script>
+</body>
+</html>

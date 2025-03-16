@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c36;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            font-size: 2rem;
+        }
+        .clock{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+        </div>
+    </div>
+    <script>
+        let clk=document.body.querySelector(".clock")
+        setInterval(() => {
+            let d=new Date()
+
+            let hrs=d.getHours()%12 || 12
+            hrs=String(hrs).padStart(2, '0')
+            let min=String(d.getMinutes()).padStart(2,'0')
+            let seconds=String(d.getSeconds()).padStart(2,'0')
+            let milisec=String(d.getMilliseconds()).substring(0,2)
+            let timestr = `${hrs}:${min}:${seconds} <sub>${milisec}</sub>`;
+
+            let dat=new Date()
+            let options = { timeZoneName: 'long' , weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            let datestr=d.toLocaleDateString('en-US',options)
+
+            clk.innerHTML=datestr+"<br><br>"+ timestr
+        }, 1);
+    </script>
+</body>
+</html>

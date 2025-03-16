@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switch</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all linear 0.3s;
+        }
+        body{
+            background-color: aqua;
+        }
+        .black{
+            background-color: rgb(75, 73, 73);
+            color: white;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            border: 2px solid black;
+            background-color: aquamarine;
+            cursor: pointer;
+            border-radius: 25px ;
+            width: 80px;
+            height: 30px;
+            
+        }
+        .switch{
+            border-radius: 50%;
+            background-color: black; 
+            margin: 1px 2px;
+            width: 30%;
+            height: 90%;    
+             animation: bkw 0.2s linear forwards;
+        }
+        @keyframes bkw {
+            from{
+                transform: translateX(50px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+
+        .fwd{
+            animation: fd 0.2s linear forwards;
+
+        }
+        .fwdbgc{
+            background-color: orange;
+        }
+        @keyframes fd {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Toggle button for changing theme</h1> <br>
+        <div class="btn">
+            <div class="switch"></div>
+        </div>
+    </div>
+    <script>
+        let b=document.querySelector(".btn")
+        let s=document.querySelector(".switch")
+        document.querySelector(".container").addEventListener("click",(e)=>{
+            alert("Container Clicked!")
+        })
+        b.addEventListener("click",(e)=>{
+            e.stopPropagation()
+            s.classList.toggle("fwd")
+            b.classList.toggle("fwdbgc")
+            document.querySelector(".container").classList.toggle("black")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .card{
+            background-color: aliceblue;
+            position: relative;
+            padding: 10px;
+            margin: 25vh auto;
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 250px;
+            height: 440px;
+            overflow: ellipsis;
+        }
+        .card img{
+            border-radius: 15px;
+            width: 15.5em;
+            height: 12em;
+        }
+        .b{
+            padding: 3px;
+            border: 1px solid grey;
+            background-color: azure;
+            text-transform: lowercase;
+            font-weight: bold;
+            font-size: 11px;
+            border-radius: 20px;
+            width: 50px;
+        }
+        .b:hover{
+            background-color: rgb(101, 159, 225);
+            color: #fff;
+            text-shadow: 2px 2px 2px;
+            box-shadow: blue 2px 2px 10px;
+        }
+        .card >div> p{
+            padding: 10px;
+            text-overflow: scroll;
+
+        }
+        .rm{
+            padding: 3px;
+            color: rgb(0, 55, 255);
+            text-shadow: 10px 10px 10px;    ;
+            background: rgb(101, 159, 225);
+            border-radius: 15px;
+            font-size: 14px;
+            display: block;
+            margin: auto;
+            
+        }
+        .rm:hover{
+            background: rgb(101, 159, 225);
+            color: #fff;
+            text-shadow: 2px 2px 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJp4WQ9tpvbC5tTIdzt4DeEz5Y1ANGjpSiuQ&s" alt="pic">
+            <button class="b">Nature</button>
+            <button class="b">Lake</button>
+            <div class="content">
+                <h1>Lorem, ipsum:</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis animi praesentium aperiam dolores repellat aut. Sapiente dolore illum iste?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+                </p>
+            </div>
+            <button class="rm">
+                Read More
+            </button>
+    </div>
+</body>
+</html>

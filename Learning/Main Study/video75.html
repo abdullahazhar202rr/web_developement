@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback and promises</title>
+</head>
+<body>
+    <script>
+        // function callback(a,b,operation){
+        //     return operation(a,b)
+        // }
+        // function add(a,b){
+        //     return a+b
+        // }
+        // function substract(a,b){
+        //     return a-b
+        // }
+        // function multiply(a,b){
+        //     return a*b
+        // }
+        // function divide(a,b){
+        //     return a/b
+        // }
+
+
+
+        // function fetchdata(callback){
+        //     setTimeout(() => {
+        //         let data="Here is your data"
+        //         callback(data)
+        //     }, 2000);
+        // }
+        // function d(data){
+        //     console.log("data :", data)
+        // }
+        // fetchdata(d)
+
+
+        // function dataf(callback){
+        //     d()
+        //     setTimeout(() => {
+        //         let data="1234"
+        //          console.log(data)
+        //     }, 2000);
+        // }
+        // function d(){
+        //     console.log("data: ")
+        // }
+
+
+        let prom1= new Promise((resolve, reject)=>{
+            let n=Math.random()
+            if(n<0.5){
+                reject("No Promise not support this range")
+            }
+            else{
+                console.log("This is a promises of js")
+                resolve("Abdullah")
+            }
+        })
+        let prom2= new Promise((resolve, reject)=>{
+            let n=Math.random()
+            if(n<0.5){
+                reject("Promise not support this range")
+            }
+            else{
+                console.log("This is a promises 2 of js")
+                resolve("Abdullah 2")
+            }
+        })
+
+        // only when resolved all promises
+
+        // let p3=Promise.all([prom1,prom2])
+        // p3.then((a)=>{
+        //     console.log(a)
+        // }).catch((err)=>{
+        //     console.log(err)
+        // })
+
+        // no matter ersovle or reject result will be gain in this 
+
+        // let p3=Promise.allSettled([prom1,prom2])
+        // p3.then((a)=>{
+        //     console.log(a)
+        // }).catch((err)=>{
+        //     console.log(err)
+        // })
+
+        // the promise which resolve first will be outcome
+
+        // let p3=Promise.race([prom1,prom2])
+        // p3.then((a)=>{
+        //     console.log(a)
+        // }).catch((err)=>{
+        //     console.log(err)
+        // })
+
+        // if all rejected then tell by ageregate error
+        
+        let p3=Promise.any([prom1,prom2])
+        p3.then((a)=>{
+            console.log(a)
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+
+
+        // prom1.then((a)=>{
+        //     console.log(a)
+        // }).catch((err)=>{
+        //     console.log(err)
+        // }).finally(()=>{
+        //     console.log("All Closed now")
+        // })
+
+        // prom1.catch((err)=>{
+        //     console.log(err)
+        // })
+    </script>
+</body>
+</html>

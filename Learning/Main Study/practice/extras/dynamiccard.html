@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic-card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(13, 13, 13, 0.919);
+            display: flex;
+            place-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
+            /* border: 2px solid black; */
+            width: 99vw;
+            height: 95vh;
+        }
+
+        .card {
+            display: flex;
+            position: relative;
+            border-radius: 10px;
+            margin: auto;
+            width: 45em;
+            height: 10em;
+            color: rgba(255, 255, 255, 0.886);
+            border: 2px solid rgba(0, 0, 0, 0.875);
+            box-shadow: 20px 20px 20px black;
+        }
+
+        .img {
+            /* border: 2px solid black; */
+            background-size: cover;
+            width: 13em;
+            border-radius: 10px;
+            position: relative;
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 5px 5px 10px;
+        }
+        .duration{
+            position: absolute;
+            color: rgba(228, 227, 227, 0.882);
+            background-color: rgba(154, 152, 152, 0.552);
+            border-radius: 4px;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .info {
+            display: flex;
+            position: absolute;
+            color: rgba(149, 142, 142, 0.951);
+            bottom:80px;
+            left: 215px;
+            gap: 15px;
+        }
+        .info>span:not(:first-child)::before{
+            content: "• ";
+        }
+        .card>h2{
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <script>
+        function createCard(img, duration, title, channel, views, old) {
+            const container=document.querySelector(".container")
+
+            const card= document.createElement("div")
+            card.classList.add("card")
+            container.appendChild(card)
+
+            const imgdiv=document.createElement("div")
+            imgdiv.classList.add("img")
+
+            const imgelem=document.createElement("img")
+            imgdiv.appendChild(imgelem)
+            imgelem.src=img
+            card.appendChild(imgdiv)
+
+            const durationElem=document.createElement("span")
+            durationElem.textContent=duration
+            durationElem.classList.add("duration")
+            imgdiv.appendChild(durationElem)
+            
+            const titleElem=document.createElement("h2");
+            titleElem.textContent=title
+            card.appendChild(titleElem)
+
+            const infoelem=document.createElement("div");
+            infoelem.classList.add("info")
+
+            const ch=document.createElement("span")
+            ch.textContent=channel
+            infoelem.appendChild(ch);
+            
+            const ve=document.createElement("span")
+            function formatviews(views){
+                if(views>=1000000000){
+                    return (views/1000000000).toFixed(1) + "B";
+                }
+                else if(views>=1000000){
+                    return (views/1000000).toFixed(1) + "M";
+                }
+                else if (views>=1000){
+                    return (views/1000).toFixed(1) + "k";
+                }
+                else{
+                    return views;
+                }
+        }
+            ve.textContent=formatviews(views)
+            infoelem.appendChild(ve);
+
+            const o= document.createElement("span")
+            o.textContent=old + " years ago ";
+            infoelem.appendChild(o);
+
+            card.appendChild(infoelem)     
+        }
+        createCard("https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg", "10:20", "Hello I am Learning Javascript Right Now", "CodebyAbdullahAzhar", 10000, 1)
+createCard("https://i.ytimg.com/vi/k6U-i4gXkLM/hqdefault.jpg", "8:30", "How to Build a Website from Scratch", "Web Dev Hub", 85, 5);
+createCard("https://i.ytimg.com/vi/lTTajzrSkCw/hqdefault.jpg", "20:15", "The History of JavaScript", "Code Explained",120, 7);
+createCard("https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg", "3:50", "CSS Animations - Beginner to Advanced", "DesignMastery", 60, 1);
+createCard("https://i.ytimg.com/vi/V-_O7nl0Ii0/hqdefault.jpg", "15:00", "C++ OOP Concepts Explained", "CodewithMe", 200, 4);
+createCard("https://i.ytimg.com/vi/RK1K2bCg4J8/hqdefault.jpg", "7:40", "React.js Crash Course", "Frontend Dev", 95000000, 2);
+
+    </script>
+</body>
+
+</html>

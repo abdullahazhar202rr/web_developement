@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes and objects</title>
+</head>
+<body>
+
+    <script>
+        class vehicle {
+            constructor(name) {
+                this.name=name;
+                console.log("Vehicle created...")
+            }
+            get name(){
+                return this._name
+            }
+            set name(newname){
+                if(newname.length<4){
+                    console.log("Name is too short")
+                }
+                this._name=newname
+            }
+            engine(){
+                console.log("Engine Started...")
+            }
+            static method(){
+                console.log("This is static method")
+            }
+        }
+        class car extends vehicle{
+            constructor(name){
+                super(name)
+                console.log(name,", this is car name")
+
+            }
+            engine(){
+                super.engine()
+                console.log("V8 started")
+            }
+        }
+        vehicle.method()
+        let v= new vehicle("Tr")
+        console.log(v.name)
+        v.name="Truck"
+        console.log(v.name)
+        let c= new car("BMW")
+        console.log(c instanceof car)
+        console.log( c instanceof vehicle)
+        console.log( v instanceof car)
+        
+       
+    </script>
+</body>
+</html>

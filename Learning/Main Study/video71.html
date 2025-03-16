@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert or del element by js</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            position: relative;
+        }
+        .click{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .black{
+            background-color: rgb(73, 72, 72);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div">I am a DIV</div>
+        <button class="click" onclick="document.querySelector('.container').classList.toggle('black')">Theme</button>
+        <script>
+            let div= document.createElement("div");
+            div.innerHTML ="DIV inserted <b> by Abdullah Azhar </b>";
+            div.setAttribute("class","created")
+            // but this will just append at last only
+            document.querySelector(".container").append(div);
+            // .prepend();
+            // .before();
+            // .after();
+            // .replaceWith();
+            let c= document.querySelector(".container");
+            c.insertAdjacentHTML("afterbegin","<b>I am inserted adjacent HTML </b>")
+            let d=document.createElement("div");
+            d.textContent="I am aadjacent Element inserted"
+            c.insertAdjacentElement("afterend",d)
+            d.classList.add("Abdullah")
+            // .remove("Abdullah")
+            // .toggle("Abdullah") it means that if present then remove or if not present then add
+        </script>
+    </div>
+</body>
+</html>

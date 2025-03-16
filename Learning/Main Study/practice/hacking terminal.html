@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Sumilator Terminal</title>
+    <style>
+        .hero{
+            border: 2px solid black;
+            background-color: rgba(17, 17, 192, 0.563);
+            color: white;
+            margin: auto;
+            width: 30vw;
+            height: auto;
+        }
+        .hero:hover{
+            background-color:rgba(17, 17, 192, 0.366);
+            backdrop-filter: blur(60px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(4, 59, 187, 0.912);">
+    <script>
+        async function randomdelay() {
+            return new Promise((resolve)=>{
+                let random_num=1+6*Math.random();
+            setTimeout(()=>{
+                    resolve()
+                    
+                }, 1000* random_num)
+            })
+        }
+        async function additem(i){
+            await randomdelay();
+            let div=document.createElement("div")
+            div.classList.add("hero")
+            div.innerHTML=i;
+            document.body.append(div)
+        }
+        async function main(){
+            setInterval(()=>{
+                let last=document.body.lastElementChild
+                if(last.innerHTML.endsWith("...")){
+                    return;
+                }
+                last.innerHTML=last.innerHTML + "."
+            },700)
+
+                let text=["Initialized Hacking now fetching data",
+                "Data Fetched",
+                "Encrypting Passwards",
+                "Password saving in files",
+                "Sending files to server",
+                "Files Sended",
+                "Deleting all data and caches"
+            ]
+            for (const i of text) {
+                await additem(i);
+            }
+        }
+        main()
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+       body{
+        background-image: url(image.jpg);
+        margin: 10px;
+        padding: 10px;
+        background-size: auto;
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-decoration: underline;
+        text-decoration-color: rgba(250, 73, 33, 0.914);
+        text-decoration-style: wavy;
+       }
+       form{
+        padding: 50px;
+        margin: 50px;
+        height: 850px;
+        width: 600px;
+        background-color: rgba(192, 221, 251, 0.8);
+        color: black;
+        border-radius: 20px;
+        box-shadow:  4px 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       form div{
+        margin-bottom: 20px;
+        height: 90px;
+        width: auto;
+        align-items: center;
+        align-content: center;
+       }
+       form label{
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+       }
+       form input{
+        width: 250px;
+        padding: 10px;
+        margin-left: 50px;
+        border-radius: 5px;
+       }
+       input[type="radio"] {
+        
+           margin-right: 5px;
+           width: 18px;
+       }
+       form select{
+        width: 250px;
+           padding: 10px;
+           margin-left: 50px;
+           border-radius: 10px;
+           border: 1px solid #4c1a1a;
+       }
+       input[type="submit"] ,input[type="reset"]{
+        font-size: 20px;
+        border-radius: 10px;
+        box-sizing: content-box;
+        margin-left: 160px;
+       }
+       input[type="submit"]:hover{
+        background-color: #4CAF50;
+        color: white;        
+       }
+       input[type="reset"]:hover{
+        background-color: #f44336;
+        color: white;        
+       }
+    </style>
+</head>
+<body>
+    <form action="getrequest">
+        <div>
+            <label for="username">username:</label>
+            <input type="text" name="username" id="username" placeholder="AbdullahAzhar" required>
+        </div>
+        <div>
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" placeholder="abdullahazhar202rb@gmail.com" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="**********" required>
+        </div>
+        <div>
+            <label for="male">Male:</label>
+            <input type="radio" name="gender" class="gender" id="male" value="male" required>
+            <label for="female">Female:</label>
+            <input type="radio" name="gender" class="gender" id="female" value="female"required>        </div>
+        <div>
+            <label for="University">Select University Name</label>
+            <select name="University name" id="University">
+                <option value="TUF">TUF</option>
+                <option value="TUF">NTU</option>
+                <option value="TUF">Fast</option>
+            </select>
+        </div>
+        <div>
+            <label for="Course">Select Course Name</label>
+            <select name="Course name" id="Course" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+        <div>
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

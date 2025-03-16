@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta, CSS, and Title -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="vacations trip form">
+        <meta name="author" content="Abdullah Azhar">
+        <link rel="shortcut icon" href="https://www.shutterstock.com/shutterstock/photos/315822794/display_1500/stock-vector--d-realistic-summer-vacation-design-for-travel-in-a-sand-beach-island-in-horizon-with-summer-items-315822794.jpg" type="image/x-icon">
+        <title>Travel form</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(to right, #00c6ff, #0072ff);
+                color: #444;
+                margin: 0; 
+                padding: 20px;
+            }
+    
+            form {
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                max-width: 700px;
+                margin: 40px auto;
+            }
+    
+            h1, h2, h3, h4 {
+                color: #0072ff;
+                text-align: center;
+            }
+    
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                font-weight: bold;
+            }
+    
+            input[type="text"], input[type="number"], select, input[type="radio"] {
+                width: calc(100% - 22px);
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+            }
+    
+            input[type="submit"] {
+                background-color: #0072ff;
+                color: white;
+                padding: 12px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+            }
+    
+            input[type="submit"]:hover {
+                background-color: #005bb5;
+            }
+    
+            fieldset {
+                border: none;
+                margin: 20px 0;
+            }
+    
+            legend {
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+                padding-bottom: 10px;
+            }
+    
+            input[type="radio"] {
+                margin-right: 10px;
+            }
+    
+            aside img {
+                display: block;
+                margin: 20px auto;
+                border-radius: 8px;
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            @media (max-width: 768px) {
+                form {
+                    padding: 20px;
+                }
+    
+                input[type="submit"] {
+                    padding: 10px;
+                }
+            }
+        </style>
+    </head>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Fill the form for vacation trip</h1>
+    </header>
+    <form action="trip.php">
+        <section>
+            <h2>Personal Information</h2>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <fieldset>
+                    <legend>Section</legend>
+                    <label><input type="radio" name="section" value="section a">Section A</label>
+                    <label><input type="radio" name="section" value="section b">Section B</label>
+                    <label><input type="radio" name="section" value="section c">Section C</label>
+                </fieldset>
+
+                <label for="roll">Roll No:</label>
+                <input type="number" id="roll" placeholder="Roll number">
+            </div>
+        </section>
+
+        <section>
+            <h2>University Information</h2>
+            <div>
+                <label>Select Campus:</label>
+                <label for="brancha"><input type="radio" id="brancha" value="Amin" name="campus">Amin campus</label>
+                <label for="branchb"><input type="radio" id="branchb" value="Saleem" name="campus">Saleem campus</label>
+
+                <label>Select Department:</label>
+                <label for="AI"><input type="radio" id="AI" name="dept" value="ai">AI department</label>
+                <label for="cs"><input type="radio" id="cs" name="dept" value="cs">CS department</label>
+                <label for="SE"><input type="radio" id="SE" name="dept" value="se">SE department</label>
+            </div>
+        </section>
+
+        <section>
+            <h2>Payment Information</h2>
+            <div>
+                <label for="payment">Payment Method:</label>
+                <select name="payment" id="payment">
+                    <option value="bank card">Card payment</option>
+                    <option value="jazzcash">JazzCash</option>
+                    <option value="easypaisa">EasyPaisa</option>
+                    <option value="cash">Cash</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <h2>Trip Information</h2>
+            <div>
+                <label for="location">Select Location:</label>
+                <label for="Makkah"><input type="radio" name="location" value="Makkah" id="Makkah">Makkah</label>
+                <label for="dubai"><input type="radio" name="location" id="dubai" value="dubai">Dubai</label>
+                <label for="malam jaba"><input type="radio" name="location" id="malam jaba" value="malam jaba">Malam Jaba</label>
+                <label for="muree"><input type="radio" name="location" value="muree" id="muree">Muree</label>
+            </div>
+        </section>
+
+        <aside>
+            <label for="image">
+                <b>Upload your image</b> (Not necessary)
+                <input type="file" name="image" id="image">
+            </label>
+            <img src="https://www.shutterstock.com/shutterstock/photos/315822794/display_1500/stock-vector--d-realistic-summer-vacation-design-for-travel-in-a-sand-beach-island-in-horizon-with-summer-items-315822794.jpg" width="250px">
+        </aside>
+
+        <footer>
+            <input type="submit" value="Submit">
+        </footer>
+    </form>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", function(event) {
+                const name = form.querySelector('input[type="text"]').value;
+                const rollNo = form.querySelector('input[type="number"]').value;
+    
+                if (name.trim() === "" || rollNo.trim() === "") {
+                    event.preventDefault();
+                    alert("Please fill in all required fields.");
+                }
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
