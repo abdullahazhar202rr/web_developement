@@ -6,9 +6,6 @@ Welcome to my **Web Development** repository! 🚀 This repository contains vari
 
 ```plaintext
 F:.
-├───bootstrap
-│   ├───myblog
-│   └───node_modules (Bootstrap dependencies)
 ├───Learning
 │   ├───CSS
 │   ├───html
@@ -16,6 +13,9 @@ F:.
 │   │   └───project
 │   ├───javascript
 │   │   └───todolist
+|   ├───bootstrap
+|   │   ├───myblog
+|   │   └───node_modules (Bootstrap dependencies)
 │   ├───Main Study
 │   │   └───practice
 │   │       ├───extras
