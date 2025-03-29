@@ -1,1 +1,16 @@
 @import "tailwindcss";
+body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        transition: all 3s linear ;
+    }
+@layer components{
+    .button{
+        @apply px-4 py-2 text-white bg-orange-600 rounded-md cursor-pointer 
+    }
+    .transition{
+        @apply transition-all duration-300 ease-linear;
+    }
+}

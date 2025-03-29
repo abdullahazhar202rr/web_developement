@@ -1,7 +1,7 @@
 import React from 'react'
-function btn() {
+function btn({a, b}) {
   return (
-    <button className='bg-amber-400 p-1 rounded-2xl'>
+    <button onClick={()=>{b(a+1)}} className='bg-amber-400 rounded-md px-3 py-1 cursor-pointer'>
         Click Me
     </button>
   )
