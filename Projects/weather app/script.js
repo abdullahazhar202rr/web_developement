@@ -56,6 +56,7 @@ async function bg(condition) {
         "clear": "assets/clear.png",
         "cloudy": "assets/cloudy.png",
         "overcast": "assets/cloudatnight.png",
+        "sunny":"assets/clear.png",
         "mist": "assets/mist.png",
         "fog": "assets/mist.png",
         "rain": "assets/rain.png",

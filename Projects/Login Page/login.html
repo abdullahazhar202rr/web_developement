@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0b8387, #000000);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            background: #2b7679;
+            padding: 40px 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #e5e7eb;
+        }
+
+        p {
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+
+        /* Input Fields */
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            background: #374151;
+            color: #d1d5db;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+        }
+        .input-field:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5), 0 0 15px rgba(56, 189, 248, 0.3);
+    transition: box-shadow 0.9s, transform 0.3s;
+}
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #0284c7;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Link */
+        .link {
+            color: #38bdf8;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .link:hover {
+            color: #0284c7;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Login</p>
+
+        <form>
+            <input type="email" name="email" id="email" placeholder="Email" required class="input-field">
+            <input type="password" name="password" id="password" placeholder="Password" required class="input-field">
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <a href="register.html" class="link">Don’t have an account? Register</a>
+    </div>
+    <script>
+        let submitButton = document.querySelector(".btn")
+        submitButton.addEventListener("click",function(event){
+            event.preventDefault();
+            let email= document.getElementById("email").value;
+            let savedemail=localStorage.getItem("email")
+            let password=document.getElementById("password").value;
+            let savedpassword=localStorage.getItem("password")
+            if(savedemail===email && savedpassword===password){
+                alert("Login Successful")
+                window.location.href="dashboard.html"
+            }
+            else{
+                alert("Invalid Credentials")
+            }
+        })
+    </script>
+</body>
+
+</html>

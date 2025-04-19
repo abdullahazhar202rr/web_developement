@@ -4,7 +4,7 @@ body{
         padding: 0;
         box-sizing: border-box;
         background-color: black;
-        transition: all 3s linear ;
+        /* transition: all 3s linear ; */
     }
 @layer components{
     .button{
