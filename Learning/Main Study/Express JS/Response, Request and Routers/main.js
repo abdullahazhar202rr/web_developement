@@ -10,6 +10,7 @@ app.post("/",(req,res)=>{
     res.send("Hello World from post")
     console.log("Hello World from post")
 })
+app.put()
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

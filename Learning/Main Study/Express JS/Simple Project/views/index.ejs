@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .form{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        form>h1{
+            margin-bottom: 20px;
+            color: #0026ff;
+        }
+        input{
+            width: 300px;
+            height: 40px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #0026ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form action="/" method="post">
+            <h1>Enter Details</h1>
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <input type="password" name="password" placeholder="Enter Your Password">
+            <input type="password" name="confirm_password" placeholder="Confirm Your Password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const password = form.password.value;
+            const confirmPassword = form.confirm_password.value;
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                alert('Passwords do not match!');
+            }
+        });
+    </script>
+</body>
+</html>

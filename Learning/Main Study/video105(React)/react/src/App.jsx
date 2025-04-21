@@ -1,5 +1,6 @@
   import React, { useEffect, useRef, useState } from 'react'
   import Btn from './components/Btn'
+  import pic from "./assets/react.svg"
 
   const App = () => {
     let [a,newa]=useState(0)
@@ -16,6 +17,7 @@
         <Btn className='bg-amber-900 mb-4 ' text={"Scale"} />
         <div className='text-2xl font-bold' >{a}</div>
       <Btn onClick={()=>{newa(a+1)}} className="mt-4" style={{ backgroundColor: hexColor }} text={"Add"} a={a} newa={newa}/>
+        <img src={pic} alt="" />
       </div>
     )
   }
