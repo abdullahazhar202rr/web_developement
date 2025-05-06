@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2f2ff8;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green */
+            box-shadow: 2px 2px 10px red;
+        }
+    </style>
+</head>
+<body>
+     <form action="/add" method="post">
+
+         <button type="submit" name="enterdata">Click to enter Dummy data</button>
+        </form>
+        <form action="/remove" method="post">
+
+            <button type="submit" name="removedata">Click to erase Dummy data</button>
+        </form>
+</body>
+</html>

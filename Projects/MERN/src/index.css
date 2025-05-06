@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@keyframes fadeup {
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadeup{
+    animation: fadeup 1s ease-in-out forwards;
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadein{
+    animation: fadein 1s ease-in-out forwards;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.zoom{
+    animation: zoom 5s ease-in-out infinite;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+    <div class="relative w-full h-[100vh] overflow-hidden">
+        <img src="https://media.istockphoto.com/id/1221473823/photo/circle-of-smoke.jpg?s=2048x2048&w=is&k=20&c=7akI4tGeLUEnzEwVOE82cOlh8Uiwutc4MDqB1NEL_qY=" alt="img1" class="img   w-full transition-all transform duration-500 ease-in-out scale-100">
+        <img src="https://media.istockphoto.com/id/1414912230/photo/luxury-speed-boat-floating-in-open-sea-at-summer-yacht-sailing-in-sea-at-hot-summer-day.jpg?s=2048x2048&w=is&k=20&c=eEiQJil5gZzbjm3tkKHFyVLuQ4EErOZr5_BIhzn54f4=" alt="img2" class="img hidden w-full transition-all transform duration-500 ease-in-out scale-100">
+        <img src="https://thumbs.dreamstime.com/z/global-network-across-planet-earth-blockchain-global-network-across-planet-earth-blockchain-elements-image-136686433.jpg?ct=jpeg" alt="img3" class="img hidden w-full transition-all duration-500 transform ease-in-out scale-100">
+    </div>
+    <script>
+        let currentimg=0;
+        let images= document.querySelectorAll('.img');
+        function slideshow(index){
+            images.forEach((slide,i) => {
+                if(i===index){
+                    slide.classList.remove('hidden');
+                    slide.classList.add('scale-150');}  
+                    else{
+                        slide.classList.add('hidden')
+                        slide.classList.remove('scale-150');
+                    }            
+            });
+        }
+        function nextslide(){
+                currentimg=(currentimg+1)%images.length;
+                slideshow(currentimg)
+            }
+            setInterval(nextslide, 2000);
+    </script>
+</body>
+</html>

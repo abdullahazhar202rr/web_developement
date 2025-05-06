@@ -1,0 +1,17 @@
+@import "tailwindcss";
+.animate{
+    animation: ani 800ms ease forwards;
+}
+@keyframes ani {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+    
+}
+.animate2{
+    animation: ani2 800ms ease forwards;
+}
+@keyframes ani2 {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+    
+}
