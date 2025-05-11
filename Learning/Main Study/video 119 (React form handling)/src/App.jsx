@@ -38,6 +38,7 @@ const [asyncerror, setasyncerror] = useState("")
       })
       
       let res=await r.text()
+      console.log(res)
       console.log(data)
 
     }
