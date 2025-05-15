@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Detection App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.2s ease;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00f7ff;
+    }
+
+    .upload-area {
+      border: 2px dashed #00f7ff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .upload-area:hover {
+      background: rgba(0, 247, 255, 0.1);
+    }
+
+    .upload-area input {
+      display: none;
+    }
+
+    .image-preview {
+      margin-top: 25px;
+      display: none;
+      animation: zoomIn 0.6s ease;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+    }
+
+    .detect-btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      background: #00f7ff;
+      color: #000;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .detect-btn:hover {
+      background: #00c4cc;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Smart Object Detector</h1>
+    <p>Upload an image and let AI detect objects!</p>
+
+    <div class="upload-area" onclick="triggerUpload()">
+      <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+      <p>📁 Click or Drag & Drop to Upload</p>
+    </div>
+
+    <div class="image-preview" id="previewContainer">
+      <img id="previewImage" src="" alt="Preview will appear here">
+    </div>
+
+    <button class="detect-btn" onclick="alert('You can now connect this to Flask backend!')">Start Detection 🚀</button>
+  </div>
+
+  <script>
+    function triggerUpload() {
+      document.getElementById("fileInput").click();
+    }
+
+    function previewImage(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const preview = document.getElementById("previewImage");
+        preview.src = reader.result;
+        document.getElementById("previewContainer").style.display = "block";
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+</html>
