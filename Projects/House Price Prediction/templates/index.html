@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Price Prediction</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div>
+        <h1 class="heading">House Price Predictor</h1>
+        <h2>Price of House(on provided details) :  Rs {{ '{:,.2f}'.format(price) if price else ' 0.0' }}</h2>
+
+
+        <form method="POST" action="/">
+            
+            
+            <label for="sqft_living">Square Feet Living:</label>
+            <input type="number" name="sqft_living" required>
+            
+            <label for="bedrooms">Bedrooms:</label>
+            <input type="number" name="bedrooms" required>
+            
+            <label for="bathrooms">Bathrooms:</label>
+            <input type="number" name="bathrooms" step="0.5" required>
+            
+            <label for="condition">Condition (1 - 5):</label>
+            <input type="number" name="condition" min="1" max="5" required>
+            
+            <label for="yr_built">Year Built:</label>
+            <input type="number" name="yr_built" min="1800" max="2025" required>
+            
+            <label for="renovated">Renovated (0 = No, 1 = Yes):</label>
+            <select name="renovated" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            
+            <label for="zipcode">Zipcode:</label>
+            <input type="number" name="zipcode" required>
+
+            <input type="submit" value="Predict Price">
+        </form>
+    </div>
+</body>
+</html>
