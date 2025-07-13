@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Azhar Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="image-400x400.jpg" type="image/x-icon">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+       body {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change to flex-start for proper alignment */
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('background_body.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    transition: background 0.5s, color 0.5s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(42, 42, 42, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+    min-height: 600px; /* Set a minimum height to help with scrolling */
+}
+
+body {
+    position: relative;
+    background-color: #eee;
+    min-height: 380px;
+}
+#loader {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px -40px;
+    z-index: 1000;
+
+}
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f39c12;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(42, 42, 42, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        /* Profile Section */
+        .profile {
+            flex: 1 1 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.05);
+            border-color: #f39c12;
+        }
+
+        .profile h2 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            color: #f39c12;
+        }
+
+        .profile p {
+            font-size: 16px;
+            color: #fffdfb;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        /* Links Section */
+        .links {
+            flex: 1 1 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
+
+        .links h3 {
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .links a i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: #f39c12;
+            transition: color 0.3s;
+        }
+
+        .links a:hover i {
+            color: #fff;
+        }
+
+        .links a:hover {
+            color: #f39c12;
+            transform: translateX(5px);
+        }
+
+        /* Skills Section */
+        .skills {
+            flex: 1 1 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
+
+        .skills h3 {
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .skills p {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .skills p i {
+            margin-right: 10px;
+            color: #f39c12;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .skills p:hover {
+            color: #f39c12;
+            transform: translateX(5px);
+        }
+
+        .skills p:hover i {
+            color: #fff;
+        }
+
+        /* Experience Section */
+        .experience {
+            flex: 1 1 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
+
+        .experience h3 {
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .experience p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .experience p strong {
+            color: #fff;
+        }
+
+        /* Projects Section */
+        .projects {
+            flex: 2 1 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
+
+        .projects h3 {
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .projects ul {
+            list-style-type: none;
+        }
+
+        .projects ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgb(165 155 141 / 22%);
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .projects ul li:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .projects ul li p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Resume Section */
+        .resume {
+            flex: 1 1 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
+
+        .resume h3 {
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .resume button {
+            background: #f39c12;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .resume button:hover {
+            background: #fff;
+            color: #f39c12;
+            transform: scale(1.05);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .top-bar a {
+            margin: 0 10px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .top-bar a:hover {
+            color: #f39c12;
+        }
+
+        .top-bar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-bar .icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .top-bar .icons i:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+        }
+
+        /* Hover Effects for All Sections */
+        .profile:hover,
+        .experience:hover,
+        .links:hover,
+        .skills:hover,
+        .projects:hover,
+        .resume:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+
+            .profile,
+            .experience,
+            .links,
+            .skills,
+            .projects,
+            .resume {
+                flex: 1 1 100%;
+            }
+            .profile{
+                padding: 40px;
+            }
+
+            .projects ul li {
+                font-size: 14px;
+            }
+
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile h2 {
+                font-size: 22px;
+            }
+
+            .resume button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Light Mode Styles */
+        .light-mode {
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            background-image: url(white_background.jpeg); /* Replace with your light background image */
+            color: #000;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        .light-mode .container {
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+        }
+
+        .light-mode .profile,
+        .light-mode .experience,
+        .light-mode .links,
+        .light-mode .skills,
+        .light-mode .projects,
+        .light-mode .resume {
+            background: rgba(221, 217, 217, 0.9);
+            color: #000;
+        }
+        .light-mode .profile p{
+           color: #000;
+        }
+
+        .light-mode .links a i,
+        .light-mode .skills p i {
+            color: #f39c12;
+        }
+
+        .light-mode .links a:hover i,
+        .light-mode .skills p:hover i {
+            color: #fff;
+        }
+        .light-mode .experience strong{
+            color: #000;
+        }
+        .light-mode .resume button {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        .light-mode .resume button:hover {
+            background: #fff;
+            color: #f39c12;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 3; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            animation: slideIn 0.5s ease-out;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: #e4bfbf;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f39c12;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            margin-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .modal-body p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Dark Mode Adjustments for Modal */
+        .light-mode .modal-content {
+            background-color: #fefefe;
+            color: #000;
+        }
+
+        .light-mode .close {
+            color: #000;
+        }
+
+        .light-mode .close:hover,
+        .light-mode .close:focus {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact me</a>
+        </div>
+        <div class="icons">
+            <i class="fas fa-sun" title="Light Mode" id="lightMode" aria-label="Switch to Light Mode"></i>
+            <i class="fas fa-moon" title="Dark Mode" id="darkMode" aria-label="Switch to Dark Mode"></i>
+            <i class="fas fa-clock" title="Recent Activity" id="recentActivity" aria-label="View Recent Activities"></i>
+            <i class="fas fa-cog" title="Settings" id="settings" aria-label="Open Settings"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="image-400x400.jpg" alt="Abdullah Azhar">
+            <h2>Abdullah Azhar</h2>
+            <p>🎓 Bachelors in Artificial Intelligence at the University of Faisalabad (Currently a student)</p>
+            <p>💻 Aspiring AI Engineer | Programming Enthusiast | Problem Solver| Front End Developer</p>
+        </div>
+        <!-- Links Section -->
+        <div class="links">
+            <h3>🔗 Links</h3>
+            <a href="https://www.linkedin.com/in/abdullah-azhar-83b8ba296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/abdullahazhar202rr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://project.codebyabdullahazhar.freewebhostmost.com/" target="_blank" rel="noopener noreferrer" aria-label="Website">
+                <i class="fas fa-link"></i> 1st Website-project
+            </a>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <h3>🔧 Skills</h3>
+            <p><i class="fas fa-code"></i> C++, Python</p>
+            <p><i class="fas fa-html5"></i> HTML, CSS</p>
+            <p><i class="fas fa-code-branch"></i> Git, GitHub</p>
+            <p><i class="fas fa-cogs"></i> OOP Concepts, API Integration</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="experience">
+            <h3>💼 Experience</h3>
+            <p><strong>Project Lead</strong> - LMS Platform, Bank System (C++)</p>
+            <p><strong>Python AI Developer</strong> - Online certification</p> <!-- Replace with your actual company -->
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects">
+            <h3>🛠️ Projects</h3>
+            <ul>
+                <li>
+                    <p><strong>Contact Management System</strong> - A system to manage and organize contacts efficiently.</p>
+                </li>
+                <li>
+                    <p><strong>Weather App</strong> - An app that provides real-time weather updates using API integration.</p>
+                </li>
+                <li>
+                    <p><strong>Guessing Game</strong> - A fun game where users guess a number within a range.</p>
+                </li>
+                <li>
+                    <p><strong>Image Resizer</strong> - A tool to resize images quickly and efficiently.</p>
+                </li>
+                <li>
+                    <p><strong>Voice-activated Speaker</strong> - A speaker that responds to voice commands.</p>
+                </li>
+                <li>
+                    <p><strong>Rock, Paper, Scissors Game</strong> - A classic game implemented with interactive UI.</p>
+                </li>
+                <li>
+                    <p><strong>Responsive Travel Form</strong> - A form designed for travelers with responsive design.</p>
+                </li>
+                <li>
+                    <p><strong>LMS Platform</strong> - A Learning Management System for online education.</p>
+                </li>
+                <li>
+                    <p><strong>Bank System</strong> - A comprehensive banking system for managing transactions.</p>
+                </li>
+                <li>
+                    <p><strong>Portfolio</strong> - Portfolio with good UI/UX but not responsive.</p>
+                </li>
+                <li>
+                    <p><strong>Netflix</strong> - A responive Website clone of Netflix.pk</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Resume Section -->
+        <div class="resume">
+            <h3>📄 Resume</h3>
+            <button onclick="window.location.href='myresume.pdf'">Resume</button> <!-- Replace with your resume link -->
+        </div>
+    </div>
+    <!-- Recent Activities Modal -->
+    <div id="recentActivitiesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRecentActivities">&times;</span>
+            <div class="modal-header">
+                <h2>🕒 Recent Activities</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong>April 2024:</strong> Launched the Weather App with real-time API integration.</p>
+                <p><strong>March 2024:</strong> Completed the Rock, Paper, Scissors Game with interactive UI.</p>
+                <p><strong>February 2024:</strong> Led the development of the LMS Platform using C++.</p>
+                <!-- Add more activities as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSettings">&times;</span>
+            <div class="modal-header">
+                <h2>⚙️ Settings</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Theme</h3>
+                <button id="themeToggleBtn">Toggle Light/Dark Mode</button>
+                <!-- Add more settings options as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Theme Toggle and Modals -->
+    <script>
+        // Theme Toggle
+        const lightModeIcon = document.getElementById('lightMode');
+        const darkModeIcon = document.getElementById('darkMode');
+        const body = document.body;
+
+        lightModeIcon.addEventListener('click', () => {
+            body.classList.add('light-mode');
+        });
+
+        darkModeIcon.addEventListener('click', () => {
+            body.classList.remove('light-mode');
+        });
+
+        // Recent Activities Modal
+        const recentActivityIcon = document.getElementById('recentActivity');
+        const recentActivitiesModal = document.getElementById('recentActivitiesModal');
+        const closeRecentActivities = document.getElementById('closeRecentActivities');
+
+        recentActivityIcon.addEventListener('click', () => {
+            recentActivitiesModal.style.display = 'flex';
+        });
+
+        closeRecentActivities.addEventListener('click', () => {
+            recentActivitiesModal.style.display = 'none';
+        });
+
+        // Settings Modal
+        const settingsIcon = document.getElementById('settings');
+        const settingsModal = document.getElementById('settingsModal');
+        const closeSettings = document.getElementById('closeSettings');
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+
+        settingsIcon.addEventListener('click', () => {
+            settingsModal.style.display = 'flex';
+        });
+
+        closeSettings.addEventListener('click', () => {
+            settingsModal.style.display = 'none';
+        });
+
+        // Theme Toggle Button inside Settings Modal
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+        });
+
+        // Close modals when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === recentActivitiesModal) {
+                recentActivitiesModal.style.display = 'none';
+            }
+            if (event.target === settingsModal) {
+                settingsModal.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        // Hide the loader when the page has loaded
+        window.onload = function() {
+            document.getElementById("loader").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Abdullah Azhar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nav {
+            width: 10%;
+            background-color: rgba(42, 42, 42, 0.95);
+            padding: 0px;
+            border-radius: 30px;
+            margin-bottom: 820px;
+            display: flex;
+            justify-content: top left;
+        }
+
+        .nav a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e67e22;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(42, 42, 42, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Header */
+        h1 {
+            margin-bottom: 20px;
+            color: #f39c12;
+            text-align: center;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form input {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            resize: none;
+        }
+
+        .contact-form button {
+            background: #f39c12;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #fff;
+            color: #f39c12;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav a {
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+    </div>
+    <div class="container">
+        <h1>Contact me</h1>
+        <form class="contact-form" id="reviewForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+            <textarea id="message" name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+</body>
+
+</html>

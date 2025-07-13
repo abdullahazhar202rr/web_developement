@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Abdullah Azhar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: rgba(42, 42, 42, 0.95);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e67e22;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(42, 42, 42, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #f39c12;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact me</a>
+    </div>
+    <div class="container">
+        <h1>About Me</h1>
+        <p><strong>Name:</strong> Abdullah Azhar</p>
+        <p><strong>Phone Number:</strong> 03140632577</p>
+        <p><strong>Email:</strong> <a href="mailto:abdullahazhar202rr@gmail.com" style="color: #f39c12;">abdullahazhar202rr@gmail.com</a></p>
+        <p><strong>Address:</strong> Chak no. 202 RB Bhaiwala Faisalabad, Punjab, Pakistan.</p>
+        <p><strong>Education:</strong> Bachelor’s in Artificial Intelligence at The University of Faisalabad</p>
+        <p><strong>Interests:</strong> Programming, Video Editing</p>
+        <p><strong>Skills:</strong> C++, Python, CSS, HTML, Git, GitHub, OOP Concepts, API Integration</p>
+    </div>
+</body>
+
+</html>
