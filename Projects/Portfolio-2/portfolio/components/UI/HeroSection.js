@@ -32,7 +32,7 @@ export default function HeroSection() {
     >
       {/* Beams BG */}
       <div className="absolute inset-0  dark:bg-black">
-        {mounted && theme === "dark" && !isMobile &&(
+        {mounted && theme === "dark"  &&(
           <Beams
             beamWidth={2}
             beamHeight={15}

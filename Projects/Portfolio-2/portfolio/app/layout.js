@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import NProgressDone from "./providers/NProgressDone";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NProgressDone/>
           {children}
+          <Analytics />
           <SpeedInsights />
 
         </ThemeProvider>
