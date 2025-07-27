@@ -174,6 +174,7 @@ const ChromaGrid = ({
               src={c.image}
               alt={c.title}
               loading="lazy"
+              fill
               className="w-full h-full object-contain rounded-[10px]"
             />
           </div>
