@@ -53,11 +53,7 @@ export default function HeroSection() {
             <div
               key={theme}
               data-aos="zoom-in"
-             className={`relative mt-22 z-10 w-[200px] h-[250px] md:w-[350px] md:h-[450px] flex items-center justify-center pointer-events-none select-none ${
-  mounted && theme === "dark"
-    ? "md:before:absolute md:before:bottom-10 md:before:w-[300px] md:before:right-0 md:before:h-[400px] md:before:rounded-full md:before:bg-[#ffaa80] md:before:opacity-90 md:before:z-[-1] md:before:shadow-2xl md:before:rotate-[45deg] md:before:shadow-[#ffaa80]"
-    : ""
-}`}
+             className="relative mt-22 z-10 w-[200px] h-[250px] md:w-[350px] md:h-[450px] flex items-center justify-center pointer-events-none select-none dark:md:before:absolute dark:md:before:bottom-10 dark:md:before:w-[300px] dark:md:before:right-0 dark:md:before:h-[400px] dark:md:before:rounded-full dark:md:before:bg-[#ffaa80] dark:md:before:opacity-90 dark:md:before:z-[-1] dark:md:before:shadow-2xl dark:md:before:rotate-[45deg] dark:md:before:shadow-[#ffaa80]"
 
             >
               <Image
