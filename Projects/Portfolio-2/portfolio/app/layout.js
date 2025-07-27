@@ -3,6 +3,7 @@ import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import NProgressDone from "./providers/NProgressDone";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,8 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NProgressDone/>
           {children}
+          <SpeedInsights />
+
         </ThemeProvider>
       </body>
     </html>
