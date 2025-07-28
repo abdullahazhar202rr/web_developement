@@ -10,6 +10,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { MailIcon, Phone, PhoneCallIcon, PhoneForwarded, PhoneIcon } from "lucide-react";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -97,10 +98,12 @@ export default function Footer() {
         <div className="relative flex flex-col md:flex-row justify-between items-center gap-6 z-10 mt-10 max-w-5xl mx-auto">
           <div>
             <h1 className="text-sm md:text-base text-left">
-  <span>📞 Phone: 0314 063 2577</span><br />
-  <span>📧 Email: abdullahazhar202rr@gmail.com</span>
-</h1>
-
+              <span className="flex gap-2"><PhoneCallIcon/> 03140632577</span>
+               <br />
+               <span className="flex gap-2">
+                 <MailIcon/> abdullahazhar202rr@gmail.com
+                </span>
+            </h1>
           </div>
           <p className="text-xs md:text-sm text-center">
             &copy; {new Date().getFullYear()} Abdullah Azhar. All rights reserved.
