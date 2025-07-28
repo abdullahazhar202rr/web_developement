@@ -96,9 +96,11 @@ export default function Footer() {
         {/* Bottom Info */}
         <div className="relative flex flex-col md:flex-row justify-between items-center gap-6 z-10 mt-10 max-w-5xl mx-auto">
           <div>
-            <h1 className="text-sm md:text-base">
-              Phone: 03140632577 ❤️<br /> Email: abdullahazhar202rr@gmail.com
-            </h1>
+            <h1 className="text-sm md:text-base text-left">
+  <span>📞 Phone: 0314 063 2577</span><br />
+  <span>📧 Email: abdullahazhar202rr@gmail.com</span>
+</h1>
+
           </div>
           <p className="text-xs md:text-sm text-center">
             &copy; {new Date().getFullYear()} Abdullah Azhar. All rights reserved.
