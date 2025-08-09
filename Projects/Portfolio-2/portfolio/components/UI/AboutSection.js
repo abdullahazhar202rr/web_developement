@@ -99,6 +99,7 @@ export default function AboutSection() {
                 pauseOnHover
                 >
                 {[
+                  { title: "AI/ML Engineer", img: "/Cryptocurrencyprediction.png" },
                   { title: "Project Lead (LMS in C++)", img: "/LMS.webp" },
                   { title: "E-commerce App", img: "/poshzem.webp" },
                   { title: "NSBPB Ambassador", img: "/NSBPB_Ambassadar.webp" },

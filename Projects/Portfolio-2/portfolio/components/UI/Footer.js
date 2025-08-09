@@ -109,6 +109,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Abdullah Azhar. All rights reserved.
             <br />
             Built with Next.js & Tailwind CSS.
+            <br />
+            Currently Working at <a href="https://aipredictions.ai/" target="_blank" className="text-green-400">AI Predictons</a>
           </p>
           <div className="flex gap-4">
             <a href="https://github.com/abdullahazhar202rr" target="_blank">

@@ -97,7 +97,7 @@ export default function HeroSection() {
               </h2>
 
               <p className="text-base md:text-lg leading-7 text-white text-justify">
-                I&apos;m a Full Stack Web Developer and passionate AI student at The University of Faisalabad,
+                I&apos;m a Full Stack Web Developer and passionate AI student at The University of Faisalabad, currently working at  <a href="https://aipredictions.ai/" target="_blank" className="text-green-400">AI Predictons</a> as AI Engineer and the Full stack + ML Engineer intern at  <a href="https://visibilitybots.com/" target="_blank" className="text-green-400">visibility bots</a>. I&apos;ve led successful projects including an LMS platform and a banking system and predictor models or E-commerence sites. I&apos;m skilled in Python, Scikit-Learn, Keras, Tensorflow, C++, HTML, CSS, JS, ReactJS (NextJS), Express JS, SQL and MongoDB.
                 skilled in <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Python</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Scikit-Learn</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Keras</span>,{" "}

@@ -22,6 +22,15 @@ export default function ProjectsSection() {
       gradient: "linear-gradient(145deg, #06B6D4, #000)",
       url: "https://pdftowordpy.streamlit.app/",
     },
+        {
+      image: "/guessgame.webp",
+      title: "Weather APP",
+      subtitle: "Weather Forecast",
+      handle: "Python",
+      borderColor: "#06B6D4",
+      gradient: "linear-gradient(145deg, #06B6D4, #000)",
+      url: "https://github.com/abdullahazhar202rr/python/blob/main/weatherapp.py",
+    },
   ];
 
   const intermediateItems = [
@@ -116,7 +125,7 @@ export default function ProjectsSection() {
       handle: "VITONHD / PyTorch",
       borderColor: "#EF4444",
       gradient: "linear-gradient(145deg, #EF4444, #000)",
-      url: "https://github.com/abdullahazhar202rr/virtual-try-on",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/virtual%20try%20on%20model(totally%20working)",
     },
     {
       image: "/diabitiesprediction.webp",
@@ -125,7 +134,7 @@ export default function ProjectsSection() {
       handle: "Keras, scikit-learn",
       borderColor: "#A855F7",
       gradient: "linear-gradient(145deg, #A855F7, #000)",
-      url: "https://github.com/abdullahazhar202rr/diabetes-predictor-ann",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/Diabetes_Prediction",
     },
     {
       image: "/housepriceprediction.webp",
@@ -152,7 +161,7 @@ export default function ProjectsSection() {
       handle: "Python",
       borderColor: "#F59E0B",
       gradient: "linear-gradient(145deg, #F59E0B, #000)",
-      url: "https://github.com/abdullahazhar202rr/personal-ai",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/Real%20time%20object%20detection",
     },
     {
       image: "/labelprediction.webp",
@@ -161,8 +170,25 @@ export default function ProjectsSection() {
       handle: "Python",
       borderColor: "#F59E0B",
       gradient: "linear-gradient(145deg, #F59E0B, #000)",
-      url: "https://github.com/abdullahazhar202rr/personal-ai",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/Pakage%20Label%20Detection",
     },
+        {
+      image: "/carpriceprediction.png",
+      title: "Car Price Prediction",
+      handle: "Python + Regression",
+      borderColor: "#F59E0B",
+      gradient: "linear-gradient(145deg, #F59E0B, #000)",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/Car_Price_Prediction",
+    },
+        {
+      image: "/Cryptocurrencyprediction.png",
+      title: "Cryptocurrency Prediction",
+      handle: "Python + Ensemble",
+      borderColor: "#F59E0B",
+      gradient: "linear-gradient(145deg, #F59E0B, #000)",
+      url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/BTC_Predictor",
+    },
+    
   ];
 
   return (
@@ -178,7 +204,7 @@ export default function ProjectsSection() {
         <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
           Fun mini-projects to build fundamentals
         </p>
-        <div className="relative w-full max-w-7xl mx-auto overflow-hidden  md:w-1/2">
+        <div className="relative w-full max-w-7xl mx-auto overflow-hidden ">
           <ChromaGrid
             items={beginnerItems}
             radius={300}
