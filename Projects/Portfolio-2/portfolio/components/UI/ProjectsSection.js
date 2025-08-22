@@ -44,6 +44,15 @@ export default function ProjectsSection() {
       url: "https://servicemate-abdullahazhar202rr.netlify.app/",
     },
     {
+      image: "/goassignment.webp",
+      title: "Assignement orders taking",
+      subtitle: "Copy of GoAssignment site",
+      handle: "scrapping and changing to learn scrapping",
+      borderColor: "#10B981",
+      gradient: "linear-gradient(145deg, #10B981, #000)",
+      url: "https://goassignmentskilltestclone.netlify.app/",
+    },
+    {
       image: "/poshzem.webp",
       title: "Poshzem E-commerce",
       subtitle: "Modern UI design",
