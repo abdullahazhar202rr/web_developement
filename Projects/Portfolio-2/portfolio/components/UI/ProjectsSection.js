@@ -45,9 +45,9 @@ export default function ProjectsSection() {
     },
     {
       image: "/goassignment.webp",
-      title: "Assignement orders taking",
-      subtitle: "Copy of GoAssignment site",
-      handle: "scrapping and changing to learn scrapping",
+      title: "Assignement orders",
+      subtitle: "Copy of site",
+      handle: "scrapping or changing to learn",
       borderColor: "#10B981",
       gradient: "linear-gradient(145deg, #10B981, #000)",
       url: "https://goassignmentskilltestclone.netlify.app/",
