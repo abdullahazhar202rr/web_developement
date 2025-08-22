@@ -50,7 +50,7 @@ export default function ProjectsSection() {
       handle: "scrapping or changing to learn",
       borderColor: "#10B981",
       gradient: "linear-gradient(145deg, #10B981, #000)",
-      url: "https://goassignmentskilltestclone.netlify.app/",
+      url: "https://goassignmentskillcloneabdullahazhar.netlify.app/",
     },
     {
       image: "/poshzem.webp",
