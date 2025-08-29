@@ -115,6 +115,15 @@ export default function ProjectsSection() {
       gradient: "linear-gradient(145deg, #7C3AED, #000)",
       url: "https://ultraeditsiteclonebyabdullahazhar.netlify.app/",
     },
+        {
+      image:'/PersonalizedAI.webp',
+      title: 'Chatbot',
+      subtitle: 'Offline Smart Assistant',
+      handle: 'CReact',
+      borderColor: '#F59E0B',
+      gradient: 'linear-gradient(145deg, #F59E0B, #000)',
+      url: 'https://github.com/abdullahazhar202rr/web_developement/tree/main/Projects/jarvis-chatbot'
+    }
   ];
 
   const advancedItems = [
@@ -197,6 +206,24 @@ export default function ProjectsSection() {
       gradient: "linear-gradient(145deg, #F59E0B, #000)",
       url: "https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/BTC_Predictor",
     },
+    {
+      image:'/PersonalizedAI.webp',
+      title: 'Personalized AI System',
+      subtitle: 'Offline Smart Assistant',
+      handle: 'C++ , llama, React',
+      borderColor: '#F59E0B',
+      gradient: 'linear-gradient(145deg, #F59E0B, #000)',
+      url: 'https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/jarvis'
+    },
+    {
+      image:'/shopmodel.webp',
+      title: 'Shop model',
+      subtitle: 'People entering, exiting, present',
+      handle: 'python, YOLOv8',
+      borderColor: '#F59E0B',
+      gradient: 'linear-gradient(145deg, #F59E0B, #000)',
+      url: 'https://github.com/abdullahazhar202rr/Machine-Learning/tree/main/Projects/Shop%20People%20record'
+    }
     
   ];
 

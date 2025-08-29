@@ -45,7 +45,7 @@ export default function Footer() {
                 loop
                 muted
                 playsInline
-                className="rounded-full w-[250px] md:w-[400px]"
+                className="rounded-full w-[250px]  md:w-[400px]"
                 style={{ pointerEvents: "none", mixBlendMode: "screen" }}
               >
                 <source
