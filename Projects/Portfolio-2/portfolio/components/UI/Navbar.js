@@ -41,7 +41,7 @@ const Navbar = () => {
           <li><NProgressLink href="/#about" className="hover:text-gray-400">About</NProgressLink></li>
           <li><NProgressLink href="/#projects" className="hover:text-gray-400">Projects</NProgressLink></li>
           <li><NProgressLink href="/contact" className="hover:text-gray-400">Contact</NProgressLink></li>
-          <li><NProgressLink href="/reviews" className="hover:text-gray-400">Review</NProgressLink></li>
+          <li><NProgressLink href="/reviews" className="hover:text-gray-400">Reviews</NProgressLink></li>
           <li><NProgressLink href="/donate" className="hover:text-gray-400">Support</NProgressLink></li>
         </ul>
 
