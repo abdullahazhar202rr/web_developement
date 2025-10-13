@@ -1,0 +1,23 @@
+# fly.toml file generated for my-flask-app
+
+app = "nlp-preprocessing-server" # Replace with your app name
+
+[build]
+  dockerfile = "./Dockerfile" # Path to the Dockerfile
+
+[env]
+  # Optional: Set any environment variables for your app here
+
+[[services]]
+  internal_port = 5000
+  external_port = 80
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+
+  [services.tcp_checks]
+    grace_period = "5s"
+    interval = "10s"
+    restart_limit = 0
+    timeout = "2s"
