@@ -160,24 +160,40 @@ export default function Home() {
         </div>
 
         <Tabs defaultValue="preprocess" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8 h-auto">
-            <TabsTrigger value="preprocess" className="flex items-center gap-2 py-3">
-              <FileText className="w-4 h-4" />
-              Preprocessing
-            </TabsTrigger>
-            <TabsTrigger value="pos" className="flex items-center gap-2 py-3">
-              <Tag className="w-4 h-4" />
-              POS Tagging
-            </TabsTrigger>
-            <TabsTrigger value="bow" className="flex items-center gap-2 py-3">
-              <Hash className="w-4 h-4" />
-              Bag of Words
-            </TabsTrigger>
-            <TabsTrigger value="tfidf" className="flex items-center gap-2 py-3">
-              <BarChart3 className="w-4 h-4" />
-              TF-IDF
-            </TabsTrigger>
-          </TabsList>
+         <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-8 h-auto gap-2">
+  <TabsTrigger
+    value="preprocess"
+    className="flex flex-col items-center gap-1 py-2 sm:flex-row sm:items-center sm:gap-2 sm:py-3"
+  >
+    <FileText className="w-4 h-4" />
+    <span className="text-sm sm:text-base">Preprocessing</span>
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="pos"
+    className="flex flex-col items-center gap-1 py-2 sm:flex-row sm:items-center sm:gap-2 sm:py-3"
+  >
+    <Tag className="w-4 h-4" />
+    <span className="text-sm sm:text-base">POS Tagging</span>
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="bow"
+    className="flex flex-col items-center gap-1 py-2 sm:flex-row sm:items-center sm:gap-2 sm:py-3"
+  >
+    <Hash className="w-4 h-4" />
+    <span className="text-sm sm:text-base">Bag of Words</span>
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="tfidf"
+    className="flex flex-col items-center gap-1 py-2 sm:flex-row sm:items-center sm:gap-2 sm:py-3"
+  >
+    <BarChart3 className="w-4 h-4" />
+    <span className="text-sm sm:text-base">TF-IDF</span>
+  </TabsTrigger>
+</TabsList>
+
 
           <TabsContent value="preprocess">
             <Card className="shadow-lg">
