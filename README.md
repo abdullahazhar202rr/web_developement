@@ -53,7 +53,7 @@ F:.
 ## 🚀 How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/abdullahazhar202rr/web-development-repo.git
+   https://github.com/abdullahazhar202rr/web_developement.git
    ```
 2. Open files in your preferred code editor and start coding! 🖥️
 
@@ -69,4 +69,5 @@ F:.
 
 ---
 📌 **Feel free to explore, contribute, or give a ⭐ to this repository!** 😃
+
 
