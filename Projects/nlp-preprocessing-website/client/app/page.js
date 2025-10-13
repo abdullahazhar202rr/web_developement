@@ -28,7 +28,7 @@ export default function Home() {
     lemmatization: false,
   });
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = 'https://nlp-preprocessing-server-production.up.railway.app/api';
 
   const handlePreprocess = async () => {
     setLoading(true);
