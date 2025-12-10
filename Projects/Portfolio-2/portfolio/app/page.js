@@ -1,5 +1,4 @@
 'use client'
-
 import HeroSection from "@/components/UI/HeroSection";
 import AboutSection from "@/components/UI/AboutSection";
 import ProjectsSection from "@/components/UI/ProjectsSection";
