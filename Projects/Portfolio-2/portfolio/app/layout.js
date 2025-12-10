@@ -1,12 +1,7 @@
-'use client'
-
+// Remove 'use client' – this is now a server component
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/app/providers/ThemeProvider";
-import NProgressDone from "./providers/NProgressDone";
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
-import Script from "next/script";
+import ThemeProviderWrapper from "./providers/ThemeProviderWrapper"; // client wrapper for ThemeProvider + analytics + nprogress + speedinsights
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,21 +40,20 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
-        {/* JSON-LD schema added via Next.js Script (safe) */}
-        <Script
-          id="json-ld-person"
+    <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
+      <head>
+        {/* JSON-LD schema for Google */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          strategy="afterInteractive"
         />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NProgressDone />
+      </head>
+
+      <body className="antialiased">
+        {/* This is a client wrapper for your client-side components */}
+        <ThemeProviderWrapper>
           {children}
-          <Analytics />
-          <SpeedInsights />
-        </ThemeProvider>
+        </ThemeProviderWrapper>
       </body>
     </html>
   );
