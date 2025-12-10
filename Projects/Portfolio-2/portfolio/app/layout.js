@@ -34,13 +34,20 @@ export default function RootLayout({ children }) {
       "https://github.com/abdullahazhar202rr"
     ],
     "jobTitle": "ML Engineer and Full Stack Developer",
-    "description": "Bachelor’s in Artificial Intelligence student at The University of Faisalabad. Skilled in Python for AI applications, C++, HTML, CSS, API integration, and web development.",
-    "alumniOf": "The University of Faisalabad"
+    "description":
+      "Bachelor’s in Artificial Intelligence student at The University of Faisalabad. Skilled in Python for AI applications, C++, HTML, CSS, API integration, and web development.",
+    "alumniOf": "The University of Faisalabad",
   };
 
   return (
     <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
       <head>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="ODktWk6NEYT8DeozNsW8pf5K60av2jvXEBOYFmMsaAk"
+        />
+
         {/* JSON-LD schema for Google */}
         <script
           type="application/ld+json"
@@ -49,10 +56,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="antialiased">
-        {/* This is a client wrapper for your client-side components */}
-        <ThemeProviderWrapper>
-          {children}
-        </ThemeProviderWrapper>
+        <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
       </body>
     </html>
   );
