@@ -1,4 +1,3 @@
-
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
@@ -27,15 +26,37 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdullah Azhar",
+    "url": "https://abdullahazhar202rr.vercel.app/",
+    "image": "https://avatars.githubusercontent.com/u/180684670?v=4",
+    "sameAs": [
+      "https://www.linkedin.com/in/abdullahazhar202",
+      "https://github.com/abdullahazhar202rr"
+    ],
+    "jobTitle": "ML Engineer and Full Stack Developer",
+    "description": "Bachelor’s in Artificial Intelligence student at The University of Faisalabad. Skilled in Python for AI applications, C++, HTML, CSS, API integration, and web development.",
+    "alumniOf": "The University of Faisalabad"
+  };
+
   return (
-    <html lang="en" >
+    <html lang="en">
+      <head>
+        {/* JSON-LD schema for Google (server-rendered) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
+
       <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NProgressDone/>
+          <NProgressDone />
           {children}
           <Analytics />
           <SpeedInsights />
-
         </ThemeProvider>
       </body>
     </html>
