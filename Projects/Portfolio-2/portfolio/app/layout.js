@@ -1,9 +1,12 @@
+'use client'
+
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import NProgressDone from "./providers/NProgressDone";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,15 +46,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        {/* JSON-LD schema for Google (server-rendered) */}
-        <script
+      <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
+        {/* JSON-LD schema added via Next.js Script (safe) */}
+        <Script
+          id="json-ld-person"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          strategy="afterInteractive"
         />
-      </head>
-
-      <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NProgressDone />
           {children}
