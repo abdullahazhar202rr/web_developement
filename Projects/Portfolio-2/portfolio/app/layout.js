@@ -1,4 +1,3 @@
-// Remove 'use client' – this is now a server component
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import ThemeProviderWrapper from "./providers/ThemeProviderWrapper"; // client wrapper for ThemeProvider + analytics + nprogress + speedinsights
