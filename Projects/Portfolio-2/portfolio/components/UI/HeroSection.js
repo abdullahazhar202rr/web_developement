@@ -96,8 +96,8 @@ export default function HeroSection() {
                 I am an Engineer turning your Paperball into Paperplane.
               </h2>
 
-              <p className="text-base md:text-lg leading-7 text-white text-justify">
-                I&apos;m a Full Stack Web Developer and passionate AI student at The University of Faisalabad, currently working at  <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-400">AI Predictons</a> as AI Engineer and the Full stack + ML Engineer intern at  <a href="https://visibilitybots.com/" target="_blank" className="text-green-400">visibility bots</a>. I&apos;ve led successful projects including an LMS platform and a banking system and predictor models or E-commerence sites. I&apos;m skilled in Python, Scikit-Learn, Keras, Tensorflow, C++, HTML, CSS, JS, ReactJS (NextJS), Express JS, SQL and MongoDB.
+              {/* <p className="text-base md:text-lg leading-7 text-white text-justify">
+                I&apos;m an AI Engineer , passionate AI student at The University of Faisalabad, currently working at  <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-400">AI Predictons</a> as AI Engineer and the Full stack + ML Engineer intern at  <a href="https://visibilitybots.com/" target="_blank" className="text-green-400">visibility bots</a>. I&apos;ve led successful projects including an LMS platform and a banking system and predictor models or E-commerence sites. I&apos;m skilled in Python, Scikit-Learn, Keras, Tensorflow, C++, HTML, CSS, JS, ReactJS (NextJS), Express JS, SQL and MongoDB.
                 skilled in <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Python</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Scikit-Learn</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Keras</span>,{" "}
@@ -107,7 +107,33 @@ export default function HeroSection() {
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">ReactJS (NextJS)</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Express JS</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">SQL</span> and MongoDB.
-              </p>
+              </p> */}
+              <p className="text-base md:text-lg leading-7 text-white text-justify">
+  I&apos;m a <span className=" font-semibold">BSAI student at The University of Faisalabad</span> with
+  a core focus on <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Artificial Intelligence</span>. I currently work as
+  an <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">AI Engineer</span> at{" "}
+  <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-400">AI Predictions</a>{" "}
+  and as a <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Full Stack+AI Engineer Intern</span> at{" "}
+  <a href="https://visibilitybots.com/" target="_blank" className="text-green-400">Visibility Bots</a>.{" "}
+  I&apos;ve delivered impactful projects including a{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Virtual Try-On System</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Package Label Prediction</span> model for Kashmir Ltd. Factory, an{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">LMS Platform</span>, a{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Banking System</span>, and a{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Fine-Tuned LLM</span> integrated into my University&apos;s Official Placement Bureau website.{" "}
+  Skilled in{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Python</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Scikit-Learn</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Keras</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">TensorFlow</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">C++</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">HTML, CSS, JS</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">ReactJS (Next.js)</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Express.js</span>,{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">SQL</span> and{" "}
+  <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">MongoDB</span>.
+</p>
+              
             </section>
           </div>
         </div>
