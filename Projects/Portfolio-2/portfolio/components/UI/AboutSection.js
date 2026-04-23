@@ -141,7 +141,7 @@ export default function AboutSection() {
             <div className="flex gap-12 mx-4 text-4xl flex-wrap" data-aos="zoom-in-up">
               {[
                 { Icon: FaPython, color: "text-yellow-400", url: "https://www.python.org/doc/" },
-                { Icon: SiCplusplus, color: "text-blue-500", url: "https://cplusplus.com/doc/" },
+                
                 { Icon: FaHtml5, color: "text-orange-600", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
                 { Icon: FaCss3Alt, color: "text-blue-400", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
                 { Icon: SiTailwindcss, color: "text-cyan-400", url: "https://tailwindcss.com/docs" },
@@ -154,12 +154,10 @@ export default function AboutSection() {
                 { Icon: SiNumpy, color: "text-blue-200", url: "https://numpy.org/doc/" },
                 { Icon: SiJavascript, color: "text-yellow-300", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
                 { Icon: SiMongodb, color: "text-green-500", url: "https://www.mongodb.com/docs/" },
-                { Icon: SiExpress, color: "text-gray-300", url: "https://expressjs.com/en/starter/installing.html" },
                 { Icon: SiFirebase, color: "text-yellow-400", url: "https://firebase.google.com/docs" },
                 { Icon: SiMysql, color: "text-blue-600", url: "https://dev.mysql.com/doc/" },
                 { Icon: SiFigma, color: "text-pink-400", url: "https://help.figma.com/hc/en-us" },
-                { Icon: SiRedux, color: "text-purple-400", url: "https://redux.js.org/introduction/getting-started" },
-                { Icon: FaDatabase, color: "text-red-400", url: "https://mongoosejs.com/docs/" },
+                
               ].map(({ Icon, color, url }, idx) => (
                 <Icon
                   key={idx}
