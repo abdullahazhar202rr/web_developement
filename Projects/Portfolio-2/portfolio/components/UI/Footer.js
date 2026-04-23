@@ -98,7 +98,7 @@ export default function Footer() {
         <div className="relative flex flex-col md:flex-row justify-between items-center gap-6 z-10 mt-10 max-w-5xl mx-auto">
           <div>
             <h1 className="text-sm md:text-base text-left">
-              {/* <span className="flex gap-2"><PhoneCallIcon/> 03140632577</span> */}
+              {/* <span className="flex gap-2"><PhoneCallIcon/> +923140632577</span> */}
               <a 
   href="https://wa.me/923140632577?text=Hi%20Abdullah%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
   target="_blank"
@@ -106,7 +106,7 @@ export default function Footer() {
   className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-200 cursor-pointer underline underline-offset-4"
 >
   <PhoneCallIcon className="w-5 h-5" />
-  03140632577
+  +923140632577
 </a>
                <br />
                {/* <span className="flex gap-2">

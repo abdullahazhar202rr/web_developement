@@ -206,7 +206,7 @@ export default function ReviewPage() {
 
       <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 px-6 py-6 border-t border-gray-700 text-gray-400 text-sm">
         <div className="text-center sm:text-left">
-          <p>Phone: 03140632577 ❤️<br /> Email: abdullahazhar202rr@gmail.com</p>
+          <p>Phone: +923140632577 ❤️<br /> Email: abdullahazhar202rr@gmail.com</p>
         </div>
         <p className="text-center">
           &copy; {new Date().getFullYear()} Abdullah Azhar. All rights reserved.
