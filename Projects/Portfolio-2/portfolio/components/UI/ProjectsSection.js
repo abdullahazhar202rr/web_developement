@@ -127,14 +127,15 @@ export default function ProjectsSection() {
   ];
 
   const advancedItems = [
+    
     {
-      image: "/objectdetection.webp",
-      title: "Object Detection",
-      subtitle: "Flask Backend + YOLOv3",
-      handle: "Computer Vision",
+      image: "/lecturegrounded.png",
+      title: "Research-Grounded LLM",
+      subtitle: "Phi3+Rag + Qlora",
+      handle: "Transformers",
       borderColor: "#22D3EE",
       gradient: "linear-gradient(145deg, #22D3EE, #000)",
-      url: "https://github.com/abdullahazhar202rr/web_developement/tree/main/Projects/Object%20Detection",
+      url: "https://www.linkedin.com/posts/abdullahazhar202_rag-llm-qlora-ugcPost-7466123302978347010-DuxP",
     },
     {
       image: "/virtualtryon.webp",

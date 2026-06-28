@@ -124,11 +124,11 @@ export default function Footer() {
             </h1>
           </div>
           <p className="text-xs md:text-sm text-center">
-            &copy; {new Date().getFullYear()} Abdullah Azhar. All rights reserved.
-            <br />
-            Built with Next.js & Tailwind CSS.
-            <br />
-            Currently Working at <a href="https://aipredictions.ai/" target="_blank" className="text-green-400">AI Predictons</a>
+
+            <hr/>
+            worked 1.5 years at <a href="https://aipredictions.ai/" target="_blank" className="text-green-400">AI Predictons</a>
+            <hr/>
+            currently working at <span  className="text-green-400">Oz Armour Australia</span>
           </p>
           <div className="flex gap-4">
             <a href="https://github.com/abdullahazhar202rr" target="_blank">

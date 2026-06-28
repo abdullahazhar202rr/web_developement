@@ -7,7 +7,6 @@ const FireButton = (props) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0 });
   const [gradientOpacity, setGradientOpacity] = useState({ left: 1, right: 0 });
 
-  // ✅ Removed TypeScript type annotation — plain JS works
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -33,7 +32,7 @@ const FireButton = (props) => {
 
   return (
     <button
-      className={`${props.classes} hover:cursor-pointer relative rounded-full flex items-center w-full max-w-xs text-black`}
+      className={`${props.classes} hover:cursor-pointer relative rounded-full flex items-center w-fit text-black`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -57,7 +56,7 @@ const FireButton = (props) => {
         className="absolute -right-2 h-[125%] w-2/5 bg-gradient-to-r from-transparent to-orange-600 blur-sm rounded-full pointer-events-none duration-100"
       />
 
-      <div className="relative flex justify-center items-center border border-white/60 bg-[#d1d1d1] w-full py-2 md:py-2.5 rounded-full overflow-hidden">
+      <div className="relative flex justify-center items-center border border-white/60 bg-[#d1d1d1] px-6 py-2 md:py-2.5 rounded-full overflow-hidden">
         <motion.div
           animate={{
             left: `${cursorPosition.x - 102}px`,
