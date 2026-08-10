@@ -15,8 +15,60 @@ const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: "Abdullah Azhar - Portfolio",
-  description: "Abdullah Azhar — ML Engineer and Full Stack Developer",
+  metadataBase: new URL("https://abdullahazhar202rr.vercel.app"),
+  title: {
+    default: "Abdullah Azhar — AI Engineer & Full Stack Developer",
+    template: "%s | Abdullah Azhar",
+  },
+  description:
+    "Portfolio of Abdullah Azhar — AI Engineer specializing in machine learning, computer vision (YOLO), fine-tuned LLMs and full-stack development with Next.js. BSAI at The University of Faisalabad.",
+  keywords: [
+    "Abdullah Azhar",
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Full Stack Developer",
+    "Computer Vision",
+    "YOLO",
+    "LLM fine-tuning",
+    "Next.js developer",
+    "Python",
+    "TensorFlow",
+    "Faisalabad",
+    "Pakistan",
+  ],
+  authors: [{ name: "Abdullah Azhar", url: "https://github.com/abdullahazhar202rr" }],
+  creator: "Abdullah Azhar",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://abdullahazhar202rr.vercel.app",
+    siteName: "Abdullah Azhar — Portfolio",
+    title: "Abdullah Azhar — AI Engineer & Full Stack Developer",
+    description:
+      "AI Engineer building ML systems, computer-vision pipelines, fine-tuned LLMs and full-stack apps.",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdullah Azhar — AI Engineer & Full Stack Developer",
+    description:
+      "AI Engineer building ML systems, computer-vision pipelines, fine-tuned LLMs and full-stack apps.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "ODktWk6NEYT8DeozNsW8pf5K60av2jvXEBOYFmMsaAk",
+  },
   icons: {
     icon: "/favicon-32x32.ico",
   },
@@ -33,21 +85,46 @@ export default function RootLayout({ children }) {
       "https://www.linkedin.com/in/abdullahazhar202",
       "https://github.com/abdullahazhar202rr"
     ],
-    "jobTitle": "ML Engineer and Full Stack Developer",
+    "jobTitle": "AI Engineer and Full Stack Developer",
     "description":
-      "Bachelor’s in Artificial Intelligence student at The University of Faisalabad. Skilled in Python for AI applications, C++, HTML, CSS, API integration, and web development.",
-    "alumniOf": "The University of Faisalabad",
+      "AI Engineer specializing in machine learning, computer vision (YOLO), LLM fine-tuning and full-stack development. BS Artificial Intelligence student at The University of Faisalabad.",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Faisalabad",
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Oz Armour Australia",
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Faisalabad",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK",
+    },
+    "email": "mailto:abdullahazhar202rr@gmail.com",
+    "knowsAbout": [
+      "Machine Learning",
+      "Computer Vision",
+      "YOLO object detection",
+      "LLM fine-tuning",
+      "Retrieval-Augmented Generation",
+      "TensorFlow",
+      "PyTorch",
+      "Python",
+      "Next.js",
+      "React",
+      "MongoDB",
+    ],
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${firaCode.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* Google Search Console Verification */}
-        <meta
-          name="google-site-verification"
-          content="ODktWk6NEYT8DeozNsW8pf5K60av2jvXEBOYFmMsaAk"
-        />
-
         {/* JSON-LD schema for Google */}
         <script
           type="application/ld+json"

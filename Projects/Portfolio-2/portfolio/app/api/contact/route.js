@@ -1,36 +1,61 @@
-
 import { NextResponse } from "next/server";
-import twilio from "twilio";
 
+// Sends the contact form as an email via Resend (https://resend.com)
+// Required env var on Vercel: RESEND_API_KEY
+// Free tier: emails deliver to the address you signed up with (CONTACT_EMAIL).
 export async function POST(request) {
   const { name, email, subject, message } = await request.json();
 
-  const client = twilio(
-    process.env.TWILIO_ACCOUNT_SID,
-    process.env.TWILIO_AUTH_TOKEN
-  );
+  if (!name || !email || !subject || !message) {
+    return NextResponse.json(
+      { status: "ERROR", message: "All fields are required" },
+      { status: 400 }
+    );
+  }
 
-  const smsBody = `
-New Contact Form Submission of Your Portfolio:
+  const to = process.env.CONTACT_EMAIL || "abdullahazhar202rr@gmail.com";
+
+  const text = `New contact form submission from your portfolio:
 
 Name: ${name}
 Email: ${email}
 Subject: ${subject}
-Message: ${message}
-  `;
+
+Message:
+${message}
+`;
 
   try {
-    const response = await client.messages.create({
-      body: smsBody,
-      from: process.env.TWILIO_PHONE_NUMBER,
-      to: process.env.MY_PHONE_NUMBER,
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Portfolio Contact <onboarding@resend.dev>",
+        to,
+        reply_to: email, // hitting "Reply" in Gmail answers the visitor directly
+        subject: `Portfolio contact: ${subject}`,
+        text,
+      }),
     });
 
-    console.log("SMS sent:", response.sid);
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("Resend error:", res.status, err);
+      return NextResponse.json(
+        { status: "ERROR", message: "Email failed" },
+        { status: 500 }
+      );
+    }
 
-    return NextResponse.json({ status: "OK", message: "SMS sent!" });
+    return NextResponse.json({ status: "OK", message: "Email sent!" });
   } catch (error) {
-    console.error("Twilio error:", error);
-    return NextResponse.json({ status: "ERROR", message: "SMS failed" }, { status: 500 });
+    console.error("Contact form error:", error);
+    return NextResponse.json(
+      { status: "ERROR", message: "Email failed" },
+      { status: 500 }
+    );
   }
 }

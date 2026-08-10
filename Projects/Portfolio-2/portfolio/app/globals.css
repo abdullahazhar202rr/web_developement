@@ -88,8 +88,8 @@ html.dark {
 } */
 :root {
   --radius: 0.625rem;
-  --mycolor: #E69973;
-  --background: linear-gradient(135deg, #14B8A6 0%, #0E7490 100%);
+  --mycolor: #C2410C;
+  --background: linear-gradient(160deg, #fafbfc 0%, #eceff3 100%);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -123,6 +123,7 @@ html.dark {
 }
 
 .dark {
+  --mycolor: #ffaa80;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

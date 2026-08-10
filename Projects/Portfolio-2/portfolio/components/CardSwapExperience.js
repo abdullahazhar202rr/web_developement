@@ -64,7 +64,7 @@ const CardSwap = ({
 
   const skewAmount = isMobile ? 0 : 6;
   const cardDist = isMobile ? 0 : cardDistance; // no horizontal spread on mobile
-  const vertDist = isMobile ? 20 : verticalDistance; // tight vertical
+  const vertDist = isMobile ? 44 : verticalDistance; // roomier so titles don't crowd
 
   const config =
     easing === "elastic"
@@ -209,7 +209,7 @@ const CardSwap = ({
   return (
     <div
       ref={container}
-      className="absolute bottom-0 right-0 transform translate-x-[5%] translate-y-[20%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[10%] max-[768px]:translate-y-[20%] max-[768px]:scale-[0.85] max-[480px]:translate-x-[5%] max-[480px]:translate-y-[15%] max-[480px]:scale-[0.7]"
+      className="absolute bottom-0 right-0 transform translate-x-[2%] translate-y-[6%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[4%] max-[768px]:translate-y-[6%] max-[768px]:scale-[0.85] max-[480px]:translate-x-[2%] max-[480px]:translate-y-[4%] max-[480px]:scale-[0.7]"
       style={{ width, height }}
     >
       {rendered}

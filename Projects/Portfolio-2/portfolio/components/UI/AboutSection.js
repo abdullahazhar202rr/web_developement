@@ -53,7 +53,7 @@ export default function AboutSection() {
               About Me
             </h2>
 
-            <p className="text-white text-lg leading-relaxed mb-10 max-w-3xl tracking-wide">
+            <p className="text-gray-800 dark:text-white text-lg leading-relaxed mb-10 max-w-3xl tracking-wide">
               I&apos;m{" "}
               <span className="text-[var(--mycolor)] font-semibold">
                 Abdullah Azhar
@@ -90,21 +90,19 @@ export default function AboutSection() {
 
           {/* RIGHT */}
           <div className="w-full lg:w-1/2 flex justify-center lg:block relative">
-            <div className="relative h-[300px] md:h-[400px] mb-20 w-full max-w-[500px] ">
+            <div className="relative h-[520px] md:h-[600px] mb-24 w-full max-w-[560px] overflow-hidden">
 
               <CardSwap
-                cardDistance={60}
-                verticalDistance={70}
-                delay={2000}
+                cardDistance={50}
+                verticalDistance={82}
+                delay={3000}
                 pauseOnHover
                 >
                 {[
-                  { title: "AI/ML Engineer", img: "/Cryptocurrencyprediction.png" },
+                  { title: "AI/ML Engineer", img: "/cryptoprediction.webp" },
+                  { title: "AI Intern", img: "/DEN.webp" },
                   { title: "Project Lead (LMS in C++)", img: "/LMS.webp" },
                   { title: "E-commerce App", img: "/poshzem.webp" },
-                  { title: "NSBPB Ambassador", img: "/NSBPB_Ambassadar.webp" },
-                  { title: "AI Intern", img: "/DEN.webp" },
-                  { title: "UI/UX", img: "/figma.webp" },
                 ].map((card, idx) => (
                   <Card key={idx} className="text-white text-lg font-semibold">
                     <h3 className="text-white text-lg font-semibold">{card.title}</h3>
@@ -159,11 +157,18 @@ export default function AboutSection() {
                 { Icon: SiFigma, color: "text-pink-400", url: "https://help.figma.com/hc/en-us" },
                 
               ].map(({ Icon, color, url }, idx) => (
-                <Icon
+                <a
                   key={idx}
-                  className={`${color} hover:scale-150 transition-transform duration-300 cursor-pointer`}
-                  onClick={() => window.open(url, "_blank")}
-                />
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${url.replace("https://", "").split("/")[0]} documentation`}
+                >
+                  <Icon
+                    aria-hidden="true"
+                    className={`${color} hover:scale-150 transition-transform duration-300 cursor-pointer`}
+                  />
+                </a>
               ))}
             </div>
           </Marquee>

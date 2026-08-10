@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Donate() {
   return (
-    <div className="flex flex-col min-h-screen bg-[image:var(--background)] dark:bg-black text-white">
+    <div className="flex flex-col min-h-screen bg-[image:var(--background)] dark:bg-black text-gray-900 dark:text-white">
       <Toaster position="top-right" />
       <Navbar />
 
@@ -16,7 +16,7 @@ export default function Donate() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Support My Work 💙
         </h1>
-        <p className="max-w-xl mb-8 text-base sm:text-lg text-gray-300">
+        <p className="max-w-xl mb-8 text-base sm:text-lg text-gray-600 dark:text-gray-300">
           If you find my work helpful, you can support me by donating.
           Just scan a QR code below with Easypaisa or JazzCash. Thank you!
         </p>
@@ -32,7 +32,7 @@ export default function Donate() {
               className="border border-gray-400 rounded-lg"
               priority
             />
-            <p className="mt-2 text-gray-400 text-sm">Scan to pay via Easypaisa</p>
+            <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">Scan to pay via Easypaisa</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -45,17 +45,17 @@ export default function Donate() {
               priority
               className="border border-gray-400 rounded-lg"
             />
-            <p className="mt-2 text-gray-400 text-sm">QR applicable for any bank</p>
+            <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">QR applicable for any bank</p>
           </div>
         </div>
 
-        <p className="text-gray-400 text-sm sm:text-base">
+        <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
           Or send manually to: <br />
           <span className="font-semibold">0314 0632577 (Abdullah Azhar)</span>
         </p>
       </main>
 
-      <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 px-6 py-6 border-t border-gray-700 text-gray-400 text-sm text-center">
+      <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 px-6 py-6 border-t border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 text-sm text-center">
         <div>
           <p>
             Phone: 0314 0632577 ❤️ <br />
@@ -79,8 +79,12 @@ export default function Donate() {
               alt="GitHub Profile"
             />
           </a>
-          <a href="https://www.linkedin.com/in/abdullahazhar202" target="_blank">
-            <FaLinkedin className="w-7 h-7 sm:w-8 sm:h-8" />
+          <a
+            href="https://www.linkedin.com/in/abdullahazhar202"
+            target="_blank"
+            aria-label="LinkedIn profile"
+          >
+            <FaLinkedin className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true" />
           </a>
         </div>
       </footer>

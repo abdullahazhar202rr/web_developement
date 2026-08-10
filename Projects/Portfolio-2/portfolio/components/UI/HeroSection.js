@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import { useTheme } from "next-themes";
 
 export default function HeroSection() {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -63,11 +63,11 @@ export default function HeroSection() {
               />
               <Image
                 src="/my_pic.webp"
-                width={200}
-                height={200}
+                width={398}
+                height={811}
                 priority
-                className="relative rounded-full w-[150px] bottom-15 h-[300px] md:w-[200px] md:h-[430px] z-10"
-                alt="my image"
+                className="relative rounded-full w-[150px] bottom-15 h-[300px] md:w-[200px] md:h-[430px] object-cover z-10"
+                alt="Abdullah Azhar"
               />
             </div>
           </div>
@@ -79,30 +79,36 @@ export default function HeroSection() {
             className="w-full md:w-1/2 relative mb-30 z-10 flex flex-col items-center md:items-start justify-center text-center md:text-left px-4"
           >
             <section className="max-w-2xl space-y-6">
-              <p className="text-white dark:text-[#ffaa80] text-md md:text-base font-mono tracking-widest">
+              <p className="text-[var(--mycolor)] dark:text-[#ffaa80] text-md md:text-base font-mono tracking-widest">
                 Hi, my name is
               </p>
 
-              <ShinyText
-                text="Abdullah Azhar."
-                disabled={false}
-                speed={5}
-                className="text-3xl md:text-6xl font-extrabold"
-              />
+              {resolvedTheme === "dark" ? (
+                <ShinyText
+                  text="Abdullah Azhar."
+                  disabled={false}
+                  speed={5}
+                  className="text-3xl md:text-6xl font-extrabold"
+                />
+              ) : (
+                <p className="text-3xl md:text-6xl font-extrabold text-gray-900">
+                  Abdullah Azhar.
+                </p>
+              )}
 
               <h2 className="text-xl md:text-4xl font-semibold">
                 I am an Engineer turning your Paperball into Paperplane.
               </h2>
 
-              <p className="text-base md:text-lg leading-7 text-white text-justify">
+              <p className="text-base md:text-lg leading-7 text-gray-800 dark:text-white text-justify">
                 I&apos;m a <span className="font-semibold">BSAI student at The University of Faisalabad</span> with
                 a core focus on <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Artificial Intelligence</span>. I currently work as
                 an <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">AI Developer</span> at{" "}
-                <span className="text-green-400">Oz Armour Australia</span>,{" "}
-                an <span className="text-[var(--mycolor)] dark:text-[#ffffff] font-semibold"> and previously as an AI Engineer at</span> at{" "}
-                <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-400">AI Predictions</a>{" "}
-                for 1.5 years and a <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Full Stack+AI Engineer Intern</span> at{" "}
-                <a href="https://visibilitybots.com/" target="_blank" className="text-green-400">Visibility Bots</a>.{" "}
+                <span className="text-green-600 dark:text-green-400">Oz Armour Australia</span>. Previously, I worked as an{" "}
+                <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">AI Engineer</span> at{" "}
+                <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-600 dark:text-green-400 underline underline-offset-2">AI Predictions</a>{" "}
+                for 1.5 years, and as a <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Full Stack+AI Engineer Intern</span> at{" "}
+                <a href="https://visibilitybots.com/" target="_blank" className="text-green-600 dark:text-green-400 underline underline-offset-2">Visibility Bots</a>.{" "}
                 I&apos;ve delivered impactful projects including a{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Virtual Try-On System</span>,{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Package Label Prediction</span> model for Kashmir Ltd. Factory, an{" "}

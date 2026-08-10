@@ -1,0 +1,32 @@
+# Abdullah Azhar — AI Engineer & Full Stack Developer
+
+> Portfolio of Abdullah Azhar, an AI Engineer from Faisalabad, Pakistan, specializing in
+> machine learning, computer vision and LLM systems, with full-stack (Next.js) delivery.
+
+## Who
+- Name: Abdullah Azhar
+- Role: AI Engineer & Full Stack Developer (currently AI Developer at Oz Armour Australia)
+- Education: BS Artificial Intelligence, The University of Faisalabad
+- Location: Faisalabad, Punjab, Pakistan
+- Email: abdullahazhar202rr@gmail.com
+- GitHub: https://github.com/abdullahazhar202rr
+- LinkedIn: https://www.linkedin.com/in/abdullahazhar202
+
+## Skills
+Python, TensorFlow/Keras, scikit-learn, Ultralytics YOLO (v5/v8), OpenCV, LLM fine-tuning,
+RAG pipelines, LSTM time-series, Next.js/React, Express.js, SQL, MongoDB, C++.
+
+## Selected work
+- Alzheimer's MRI classification (research collab with a PhD scholar): ResNet50+DenseNet121
+  ensemble with attention, class-weighted training for 50:1 imbalance, 92.18% test accuracy on ~10.9k scans.
+- Architecture Diagram Generator: fine-tuned LLM that turns plain-English system descriptions
+  into editable React Flow diagrams.
+- Virtual Try-On system (VITON-HD / PyTorch); Package Label Prediction on Jetson Nano for a factory.
+- PPE Detection and real-time Fire & Smoke Detection (custom-trained YOLO, OpenCV).
+- Fine-tuned, research-grounded LLM (Phi-3 + RAG + QLoRA) for a university placement bureau.
+- Multi-agent business platforms (CRM/BI/meeting agents) built during the Visibility Bots internship.
+
+## Pages
+- Home & projects: https://abdullahazhar202rr.vercel.app/
+- Contact: https://abdullahazhar202rr.vercel.app/contact
+- Resume (PDF): https://abdullahazhar202rr.vercel.app/Abdullah_Azhar.pdf

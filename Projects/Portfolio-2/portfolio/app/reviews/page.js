@@ -90,7 +90,7 @@ export default function ReviewPage() {
               Customer Reviews
             </h1>
             <p className="mt-4 text-base sm:text-lg text-gray-800 dark:text-gray-300">
-              Share your experience with us! Your feedback helps us improve.
+              Share your experience with me! Your feedback helps me improve.
             </p>
           </div>
 

@@ -57,6 +57,8 @@ const Navbar = () => {
           <ModeToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
             className="text-3xl focus:outline-none"
           >
             {menuOpen ? <HiX /> : <HiMenu />}

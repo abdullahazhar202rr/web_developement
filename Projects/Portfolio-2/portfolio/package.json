@@ -45,5 +45,11 @@
     "cross-env": "^10.0.0",
     "eslint": "^9.32.0",
     "eslint-config-next": "^15.4.4"
+  },
+  "allowScripts": {
+    "@tailwindcss/oxide@4.1.11": true,
+    "@vercel/speed-insights@1.2.0": true,
+    "sharp@0.34.3": true,
+    "unrs-resolver@1.11.1": true
   }
 }

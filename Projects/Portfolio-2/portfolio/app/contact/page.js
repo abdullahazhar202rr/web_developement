@@ -69,7 +69,7 @@ export default function Contact() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Let&apos;s Work Together
                 </h1>
-                <p className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-700 dark:text-white max-w-2xl mx-auto leading-relaxed">
                   Ready to bring your vision to life? I&apos;m here to help create something extraordinary.
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default function Contact() {
                     <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
                       Get in Touch
                     </h2>
-                    <p className="text-white text-base md:text-lg">
+                    <p className="text-gray-700 dark:text-white text-base md:text-lg">
                       I&apos;m always excited to discuss new ideas and projects. Let&apos;s connect!
                     </p>
                   </div>
@@ -186,7 +186,7 @@ export default function Contact() {
                         <h3 className="font-semibold text-gray-900 dark:text-white">
                           Email <span className="text-[10px] text-gray-500">click to mail</span>
                         </h3>
-                        <p className="text-white dark:text-gray-300">abdullahazhar202rr@gmail.com</p>
+                        <p className="text-gray-800 dark:text-gray-300">abdullahazhar202rr@gmail.com</p>
                       </div>
                     </a>
 
@@ -202,7 +202,7 @@ export default function Contact() {
                         <h3 className="font-semibold text-gray-900 dark:text-white">
                           Phone <span className="text-[10px] text-gray-500">click for WhatsApp</span>
                         </h3>
-                        <p className="text-white dark:text-gray-300">0314 0632577</p>
+                        <p className="text-gray-800 dark:text-gray-300">0314 0632577</p>
                       </div>
                     </a>
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                     <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 animate-pulse" />
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white">Quick Response</h4>
-                      <p className="text-sm text-white dark:text-gray-300">
+                      <p className="text-sm text-gray-800 dark:text-gray-300">
                         I typically respond within 24 hours if you send me a message.
                       </p>
                     </div>

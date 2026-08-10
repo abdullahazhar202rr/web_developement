@@ -12,6 +12,7 @@ const ChromaGrid = ({
   damping = 0.45,
   fadeOut = 0.6,
   ease = "power3.out",
+  onItemClick,
 }) => {
   const rootRef = useRef(null);
   const fadeRef = useRef(null);
@@ -152,7 +153,9 @@ const ChromaGrid = ({
         <article
           key={i}
           onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
+          onClick={() =>
+            c.details && onItemClick ? onItemClick(c) : handleCardClick(c.url)
+          }
           className="group h-75 m-2    relative flex flex-col w-[350px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
           style={
             {
