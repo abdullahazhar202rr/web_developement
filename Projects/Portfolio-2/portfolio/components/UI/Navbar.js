@@ -74,7 +74,6 @@ const Navbar = () => {
           <NProgressLink href="/#projects" onClick={() => setMenuOpen(false)} className="hover:text-gray-400">Projects</NProgressLink>
           <NProgressLink href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-gray-400">Contact</NProgressLink>
           <NProgressLink href="/reviews" onClick={() => setMenuOpen(false)} className="hover:text-gray-400">Review</NProgressLink>
-          <NProgressLink href="/donate" onClick={() => setMenuOpen(false)} className="hover:text-gray-400">Support</NProgressLink>
           <a href="/Abdullah_Azhar.pdf" target='_blank' onClick={() => setMenuOpen(false)}>
             <Button text='View CV' />
           </a>

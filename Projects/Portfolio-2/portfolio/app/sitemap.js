@@ -19,11 +19,5 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.6,
     },
-    {
-      url: `${base}/donate`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
   ];
 }

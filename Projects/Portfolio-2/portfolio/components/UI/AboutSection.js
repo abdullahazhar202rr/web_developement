@@ -63,8 +63,8 @@ export default function AboutSection() {
                 The University of Faisalabad
               </span>{" "}
               and a Full Stack Web Developer. I&apos;ve led successful projects
-              including an LMS platform and a banking system. I&apos;m experienced in{" "}
-              <span className="text-[var(--mycolor)]">Python(ML)</span>,{" "}
+              including an Fine Tuning LLMs and agent workflows for companies with dashboard. I&apos;m experienced in{" "}
+              <span className="text-[var(--mycolor)]">Python(ML/AI)</span>,{" "}
               <span className="text-[var(--mycolor)]">ReactJS</span>, and{" "}
               <span className="text-[var(--mycolor)]">TailwindCSS</span>.
             </p>
