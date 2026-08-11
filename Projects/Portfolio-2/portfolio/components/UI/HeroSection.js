@@ -97,7 +97,7 @@ export default function HeroSection() {
               )}
 
               <h2 className="text-xl md:text-4xl font-semibold">
-                I am an Engineer turning your Paperball into Paperplane.
+                I am an AI Engineer turning your Paperball into Paperplane.
               </h2>
 
               <p className="text-base md:text-lg leading-7 text-gray-800 dark:text-white text-justify">
