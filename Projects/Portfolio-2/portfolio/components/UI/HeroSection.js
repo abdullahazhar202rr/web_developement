@@ -107,7 +107,7 @@ export default function HeroSection() {
                 <span className="text-green-600 dark:text-green-400">Oz Armour Australia</span>. Previously, I worked as an{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">AI Engineer</span> at{" "}
                 <a href="https://aipredictions.ai/creators/9f7d6374-e1bf-48da-b199-a17a3195db5f/details" target="_blank" className="text-green-600 dark:text-green-400 underline underline-offset-2">AI Predictions</a>{" "}
-                for 1.5 years, and as a <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Full Stack+AI Engineer Intern</span> at{" "}
+                for 8 months, and as a <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Full Stack+AI Engineer Intern</span> at{" "}
                 <a href="https://visibilitybots.com/" target="_blank" className="text-green-600 dark:text-green-400 underline underline-offset-2">Visibility Bots</a>.{" "}
                 I&apos;ve delivered impactful projects including a{" "}
                 <span className="text-[var(--mycolor)] dark:text-[#ffaa80] font-semibold">Virtual Try-On System</span>,{" "}

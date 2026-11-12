@@ -127,7 +127,7 @@ export default function Footer() {
           </div>
           <div className="text-xs md:text-sm text-center">
             <hr/>
-            <p>worked 1.5 years at <a href="https://aipredictions.ai/" target="_blank" className="text-green-600 dark:text-green-400">AI Predictions</a></p>
+            <p>worked 8 months at <a href="https://aipredictions.ai/" target="_blank" className="text-green-600 dark:text-green-400">AI Predictions</a></p>
             <hr/>
             <p>currently working at <span className="text-green-600 dark:text-green-400">Oz Armour Australia</span></p>
           </div>
